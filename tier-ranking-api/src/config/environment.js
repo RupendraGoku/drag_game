@@ -7,10 +7,7 @@ const requiredInProduction = [
   'JWT_ACCESS_SECRET',
   'JWT_REFRESH_SECRET',
   'PUBLIC_APP_URL',
-  'ADMIN_APP_URL',
-  'CLOUDINARY_CLOUD_NAME',
-  'CLOUDINARY_API_KEY',
-  'CLOUDINARY_API_SECRET'
+  'ADMIN_APP_URL'
 ];
 
 const nodeEnv = process.env.NODE_ENV || 'development';
