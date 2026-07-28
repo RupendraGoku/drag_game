@@ -7,6 +7,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { z } from 'zod';
 import { apiErrorMessage } from '../../api/axiosInstance.js';
 import { genreApi } from '../../api/genreApi.js';
+import { REQUIRED_IMAGE_ITEMS } from '../../config/rankingConfig.js';
 import { useUnsavedChanges } from '../../hooks/useUnsavedChanges.js';
 import { ConfirmDialog } from '../common/ConfirmDialog.jsx';
 import { BasicInformationSection } from './BasicInformationSection.jsx';
@@ -63,7 +64,7 @@ const publishingErrors = (payload) => {
   if (activeCategories.length < 1) errors.push('At least one enabled ranking column is required.');
   if (new Set(categoryNames).size !== categoryNames.length) errors.push('Ranking column names must be unique.');
   if (activeTiers.length < 2) errors.push('At least two enabled ranking rows are required.');
-  if (payload.items.length !== 12) errors.push('Exactly 12 image items are required before publishing.');
+  if (payload.items.length !== REQUIRED_IMAGE_ITEMS) errors.push(`Exactly ${REQUIRED_IMAGE_ITEMS} image items are required before publishing.`);
   payload.items.forEach((item, index) => {
     if (!item.title?.trim()) errors.push(`Image item ${index + 1} needs a title.`);
     if (!item.image?.url) errors.push(`Image item ${index + 1} needs an uploaded image.`);
@@ -283,7 +284,7 @@ export function GenreForm({ mode, initialGenre }) {
         </section>
         <div className="sticky bottom-0 z-20 flex flex-wrap items-center justify-between gap-3 border border-[#d8dee7] bg-white p-3 shadow-lg">
           <div className="text-sm font-semibold text-[#64748b]">
-            {items.length} of 12 images. {topCategories.filter((category) => category.isActive !== false).length} active ranking columns.{' '}
+            {items.length} of {REQUIRED_IMAGE_ITEMS} images. {topCategories.filter((category) => category.isActive !== false).length} active ranking columns.{' '}
             {tiers.filter((tier) => tier.isActive !== false).length} active rows.
           </div>
           <div className="flex flex-wrap gap-2">

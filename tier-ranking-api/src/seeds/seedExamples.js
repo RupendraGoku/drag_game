@@ -1,5 +1,6 @@
 import crypto from 'crypto';
 import { connectDatabase } from '../config/database.js';
+import { REQUIRED_IMAGE_ITEMS } from '../config/rankingConfig.js';
 import { Admin } from '../models/Admin.js';
 import { Genre } from '../models/Genre.js';
 
@@ -47,6 +48,21 @@ const createItems = (slug, titles, categories) =>
     order
   }));
 
+const createSampleItem = (slug, title, order, categories) => ({
+  id: makeId(),
+  title,
+  alt: `${title} portrait`,
+  description: `${title} sample ranking item`,
+  image: {
+    url: `https://picsum.photos/seed/${slug}-${order + 1}/600/600`,
+    publicId: '',
+    width: 600,
+    height: 600
+  },
+  categoryIds: [categories[order % categories.length].id, categories[(order + 1) % categories.length].id],
+  order
+});
+
 const sampleGenres = () => {
   const bgmiCategories = createCategories(['Assaulter', 'Sniper', 'Rusher', 'Grenadier', 'Fragger', 'Camper']);
   const footballCategories = createCategories(['Forward', 'Midfielder', 'Defender', 'Goalkeeper', 'Playmaker']);
@@ -69,7 +85,26 @@ const sampleGenres = () => {
       tiers: tierRows.map((tier) => ({ ...tier, id: makeId() })),
       items: createItems(
         'bgmi',
-        ['Jonathan', 'Sarang', 'Omega', 'Neyo', 'Akshat', 'Mavi', 'Scout', 'Zgod', 'NinjaJOD', 'Shadow', 'Aaru', 'ClutchGod'],
+        [
+          'Jonathan',
+          'Sarang',
+          'Omega',
+          'Neyo',
+          'Akshat',
+          'Mavi',
+          'Scout',
+          'Zgod',
+          'NinjaJOD',
+          'Shadow',
+          'Aaru',
+          'ClutchGod',
+          'Saumraj',
+          'Jelly',
+          'Viper',
+          'Sensei',
+          'Naksh',
+          'Aditya'
+        ],
         bgmiCategories
       ),
       version: 1,
@@ -94,7 +129,26 @@ const sampleGenres = () => {
       tiers: tierRows.map((tier) => ({ ...tier, id: makeId() })),
       items: createItems(
         'football',
-        ['Messi', 'Ronaldo', 'Pele', 'Maradona', 'Zidane', 'Cruyff', 'Ronaldinho', 'Mbappe', 'Haaland', 'Neymar', 'Modric', 'Iniesta'],
+        [
+          'Messi',
+          'Ronaldo',
+          'Pele',
+          'Maradona',
+          'Zidane',
+          'Cruyff',
+          'Ronaldinho',
+          'Mbappe',
+          'Haaland',
+          'Neymar',
+          'Modric',
+          'Iniesta',
+          'Xavi',
+          'Ramos',
+          'Buffon',
+          'Kaka',
+          'Benzema',
+          'Henry'
+        ],
         footballCategories
       ),
       version: 1,
@@ -112,10 +166,13 @@ const run = async () => {
   for (const genre of sampleGenres()) {
     const existing = await Genre.findOne({ slug: genre.slug });
     if (existing) {
+      existing.topCategories = existing.topCategories || [];
+      existing.items = existing.items || [];
       const existingNames = new Set(existing.topCategories.map((category) => category.name.toLowerCase()));
       const missingCategories = genre.topCategories.filter((category) => !existingNames.has(category.name.toLowerCase()));
+      let changed = false;
 
-      if (!missingCategories.length) {
+      if (!missingCategories.length && existing.items.length >= REQUIRED_IMAGE_ITEMS) {
         console.log(`Sample genre already current: ${genre.slug}`);
         continue;
       }
@@ -127,6 +184,7 @@ const run = async () => {
           order: existing.topCategories.length
         };
         existing.topCategories.push(nextCategory);
+        changed = true;
 
         existing.items.forEach((item, index) => {
           if (index % existing.topCategories.length === nextCategory.order) {
@@ -135,10 +193,23 @@ const run = async () => {
         });
       }
 
-      existing.version += 1;
-      existing.updatedAt = new Date();
-      await existing.save();
-      console.log(`Updated sample genre categories: ${genre.slug}`);
+      const existingItemNames = new Set(existing.items.map((item) => item.title.toLowerCase()));
+      const missingItems = genre.items.filter((item) => !existingItemNames.has(item.title.toLowerCase()));
+
+      for (const item of missingItems) {
+        if (existing.items.length >= REQUIRED_IMAGE_ITEMS) break;
+        existing.items.push(createSampleItem(genre.slug.split('-')[0], item.title, existing.items.length, existing.topCategories));
+        changed = true;
+      }
+
+      if (changed) {
+        existing.version += 1;
+        existing.updatedAt = new Date();
+        await existing.save();
+        console.log(`Updated sample genre: ${genre.slug}`);
+      } else {
+        console.log(`Sample genre already current: ${genre.slug}`);
+      }
       continue;
     }
 

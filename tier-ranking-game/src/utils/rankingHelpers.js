@@ -1,4 +1,5 @@
 import { arrayMove } from '@dnd-kit/sortable';
+import { REQUIRED_IMAGE_ITEMS } from '../config/rankingConfig.js';
 import { getCategoryCellId, getGenreId, POOL_ID } from './dragHelpers.js';
 
 export const ordered = (items = []) => [...items].sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
@@ -7,7 +8,7 @@ export const activeTiers = (genre) => ordered(genre.tiers || []).filter((tier) =
 
 export const activeCategories = (genre) => ordered(genre.topCategories || []).filter((category) => category.isActive !== false);
 
-export const itemMap = (genre) => new Map((ordered(genre.items || []).slice(0, 12)).map((item) => [item.id, item]));
+export const itemMap = (genre) => new Map((ordered(genre.items || []).slice(0, REQUIRED_IMAGE_ITEMS)).map((item) => [item.id, item]));
 
 export const createEmptyTierItems = (tiers, categories = []) =>
   tiers.reduce((acc, tier) => {
@@ -27,7 +28,7 @@ const allStateItemIds = (state) => [...state.unrankedItemIds, ...Object.values(s
 export const isCompatibleProgress = (saved, genre) => {
   if (!saved || saved.genreId !== getGenreId(genre) || saved.genreVersion !== genre.version) return false;
   const currentItemIds = ordered(genre.items || [])
-    .slice(0, 12)
+    .slice(0, REQUIRED_IMAGE_ITEMS)
     .map((item) => item.id);
   const currentTierIds = activeTiers(genre).map((tier) => tier.id);
   const currentCategoryIds = activeCategories(genre).map((category) => category.id);
@@ -38,7 +39,7 @@ export const isCompatibleProgress = (saved, genre) => {
   const uniqueSavedIds = new Set(savedIds);
 
   return (
-    currentItemIds.length === 12 &&
+    currentItemIds.length === REQUIRED_IMAGE_ITEMS &&
     savedIds.length === currentItemIds.length &&
     uniqueSavedIds.size === currentItemIds.length &&
     currentItemIds.every((id) => uniqueSavedIds.has(id)) &&
@@ -61,7 +62,7 @@ export const buildInitialGameState = (genre, savedProgress) => {
     genreVersion: genre.version,
     selectedCategoryId: 'all',
     unrankedItemIds: ordered(genre.items || [])
-      .slice(0, 12)
+      .slice(0, REQUIRED_IMAGE_ITEMS)
       .map((item) => item.id),
     tierItems: createEmptyTierItems(tiers, categories),
     lastUpdated: new Date().toISOString()

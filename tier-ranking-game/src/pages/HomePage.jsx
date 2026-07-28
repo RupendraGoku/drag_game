@@ -7,6 +7,7 @@ import { genreApi } from '../api/genreApi.js';
 import { EmptyState } from '../components/common/EmptyState.jsx';
 import { Skeleton } from '../components/common/Skeleton.jsx';
 import { GenreGrid } from '../components/genres/GenreGrid.jsx';
+import { REQUIRED_IMAGE_ITEMS } from '../config/rankingConfig.js';
 import { loadRecentlyPlayed } from '../utils/storageHelpers.js';
 
 export function HomePage() {
@@ -44,7 +45,7 @@ export function HomePage() {
     <div className="mx-auto max-w-6xl px-3 py-4 sm:px-4">
       <section className="mb-4">
         <h1 className="max-w-3xl text-2xl font-black text-[#111827] sm:text-3xl">Choose a Tier Ranking Game</h1>
-        <p className="mt-1.5 max-w-2xl text-sm text-[#64748b]">Pick a published genre, rank exactly 12 images, and continue editing your saved board later.</p>
+        <p className="mt-1.5 max-w-2xl text-sm text-[#64748b]">Pick a published genre, rank exactly {REQUIRED_IMAGE_ITEMS} images, and continue editing your saved board later.</p>
       </section>
       <section className="surface mb-4 grid gap-2 p-3 lg:grid-cols-[1fr_auto]">
         <label className="relative">

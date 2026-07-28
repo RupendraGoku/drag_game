@@ -3,6 +3,7 @@ import crypto from 'crypto';
 import fs from 'fs/promises';
 import path from 'path';
 import { env } from '../config/environment.js';
+import { REQUIRED_IMAGE_ITEMS } from '../config/rankingConfig.js';
 import { ApiError } from '../utils/ApiError.js';
 import { slugify } from '../utils/slugify.js';
 import { validatePublishableGenre } from './genreService.js';
@@ -95,7 +96,26 @@ const sampleGenres = () => [
     heading: 'Rank the Best BGMI Players',
     description: 'Build a clean tier list for popular competitive players.',
     categoryNames: ['Assaulter', 'Sniper', 'Rusher', 'Grenadier', 'Fragger', 'Camper'],
-    itemTitles: ['Jonathan', 'Sarang', 'Omega', 'Neyo', 'Akshat', 'Mavi', 'Scout', 'Zgod', 'NinjaJOD', 'Shadow', 'Aaru', 'ClutchGod']
+    itemTitles: [
+      'Jonathan',
+      'Sarang',
+      'Omega',
+      'Neyo',
+      'Akshat',
+      'Mavi',
+      'Scout',
+      'Zgod',
+      'NinjaJOD',
+      'Shadow',
+      'Aaru',
+      'ClutchGod',
+      'Saumraj',
+      'Jelly',
+      'Viper',
+      'Sensei',
+      'Naksh',
+      'Aditya'
+    ]
   }),
   makeGenre({
     name: 'Football Player Ranking',
@@ -103,7 +123,26 @@ const sampleGenres = () => [
     heading: 'Rank the Best Football Players',
     description: 'Compare all-time football names in a fast tier-ranking board.',
     categoryNames: ['Forward', 'Midfielder', 'Defender', 'Goalkeeper', 'Playmaker'],
-    itemTitles: ['Messi', 'Ronaldo', 'Pele', 'Maradona', 'Zidane', 'Cruyff', 'Ronaldinho', 'Mbappe', 'Haaland', 'Neymar', 'Modric', 'Iniesta']
+    itemTitles: [
+      'Messi',
+      'Ronaldo',
+      'Pele',
+      'Maradona',
+      'Zidane',
+      'Cruyff',
+      'Ronaldinho',
+      'Mbappe',
+      'Haaland',
+      'Neymar',
+      'Modric',
+      'Iniesta',
+      'Xavi',
+      'Ramos',
+      'Buffon',
+      'Kaka',
+      'Benzema',
+      'Henry'
+    ]
   })
 ];
 
@@ -114,9 +153,11 @@ const syncSampleGenreCategories = () => {
     const existing = store.genres.find((genre) => genre.slug === sample.slug);
     if (!existing) continue;
 
+    existing.topCategories = existing.topCategories || [];
+    existing.items = existing.items || [];
     const existingNames = new Set((existing.topCategories || []).map((category) => category.name.toLowerCase()));
     const missingCategories = sample.topCategories.filter((category) => !existingNames.has(category.name.toLowerCase()));
-    if (!missingCategories.length) continue;
+    let changed = false;
 
     for (const category of missingCategories) {
       const nextCategory = {
@@ -125,6 +166,7 @@ const syncSampleGenreCategories = () => {
         order: existing.topCategories.length
       };
       existing.topCategories.push(nextCategory);
+      changed = true;
 
       existing.items.forEach((item, index) => {
         if (index % existing.topCategories.length === nextCategory.order) {
@@ -133,8 +175,27 @@ const syncSampleGenreCategories = () => {
       });
     }
 
-    existing.version = (existing.version || 1) + 1;
-    existing.updatedAt = now();
+    const existingItemNames = new Set((existing.items || []).map((item) => item.title.toLowerCase()));
+    const missingItems = sample.items.filter((item) => !existingItemNames.has(item.title.toLowerCase()));
+
+    for (const item of missingItems) {
+      if (existing.items.length >= REQUIRED_IMAGE_ITEMS) break;
+      existing.items.push({
+        ...item,
+        id: id(),
+        categoryIds: [
+          existing.topCategories[existing.items.length % existing.topCategories.length].id,
+          existing.topCategories[(existing.items.length + 1) % existing.topCategories.length].id
+        ],
+        order: existing.items.length
+      });
+      changed = true;
+    }
+
+    if (changed) {
+      existing.version = (existing.version || 1) + 1;
+      existing.updatedAt = now();
+    }
   }
 };
 
