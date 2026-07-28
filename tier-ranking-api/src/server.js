@@ -17,6 +17,9 @@ const start = async () => {
 };
 
 start().catch((error) => {
-  console.error(error);
+  console.error('API startup failed');
+  console.error(error?.message || error);
+  if (error?.name) console.error(`Error name: ${error.name}`);
+  if (error?.code) console.error(`Error code: ${error.code}`);
   process.exit(1);
 });
