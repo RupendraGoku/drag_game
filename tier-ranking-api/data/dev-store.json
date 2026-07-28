@@ -1,0 +1,683 @@
+{
+  "admins": [
+    {
+      "_id": "7615afbe-c602-4a44-aeb9-792d3e580c38",
+      "name": "Mishu",
+      "email": "mishu@gmail.com",
+      "passwordHash": "$2b$12$fmCcCatzyJ0SIbH0BSNT7eGCEI2pFFtNBOQhQmULEZX.nuhJe3TYy",
+      "role": "superadmin",
+      "isActive": true,
+      "createdAt": "2026-07-28T05:21:45.487Z",
+      "updatedAt": "2026-07-28T05:21:45.487Z"
+    },
+    {
+      "_id": "c330a0bb-3bb9-4f87-a808-8231edd544bb",
+      "name": "Goku",
+      "email": "goku@gmail.com",
+      "passwordHash": "$2b$12$CmpuU3h9V0acX6YVnpUyfuDz0gNt1eptrGASNxtIh2Kjp76saivnW",
+      "role": "admin",
+      "isActive": true,
+      "createdAt": "2026-07-28T05:21:45.773Z",
+      "updatedAt": "2026-07-28T05:21:45.773Z"
+    }
+  ],
+  "refreshTokens": [
+    {
+      "tokenHash": "09ef703d22348222ecbf5028b7a8dc994ba911b6aa388460ef8f9e06c000b12c",
+      "admin": "7615afbe-c602-4a44-aeb9-792d3e580c38",
+      "expiresAt": "2026-08-27T05:23:43.995Z",
+      "revokedAt": null,
+      "userAgent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8875",
+      "ip": "::1"
+    },
+    {
+      "tokenHash": "4ec92261bff471d2d7b0b6da856d2f728d55f109fdb44d61fb321d0063fbbcdb",
+      "admin": "c330a0bb-3bb9-4f87-a808-8231edd544bb",
+      "expiresAt": "2026-08-27T05:23:43.997Z",
+      "revokedAt": null,
+      "userAgent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8875",
+      "ip": "::1"
+    },
+    {
+      "tokenHash": "8a5c507ceeb416c15471af1b2272f4f2483d0a986e6ed96f18569a3a09ea1d9b",
+      "admin": "7615afbe-c602-4a44-aeb9-792d3e580c38",
+      "expiresAt": "2026-08-27T06:21:25.548Z",
+      "revokedAt": null,
+      "userAgent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8875",
+      "ip": "::1"
+    },
+    {
+      "tokenHash": "0ce867a590d87be8902fa7a109c01fabdc8f86253151610c24a7f6bc8ef9949c",
+      "admin": "c330a0bb-3bb9-4f87-a808-8231edd544bb",
+      "expiresAt": "2026-08-27T06:21:36.954Z",
+      "revokedAt": null,
+      "userAgent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-US) WindowsPowerShell/5.1.26100.8875",
+      "ip": "::1"
+    }
+  ],
+  "genres": [
+    {
+      "_id": "daf4dcdd-9f25-484d-af2a-81f614a1cc3a",
+      "name": "BGMI Player Ranking",
+      "slug": "bgmi-player-ranking",
+      "heading": "Rank the Best BGMI Players",
+      "description": "Build a clean tier list for popular competitive players.",
+      "coverImage": {
+        "url": "https://picsum.photos/seed/bgmi-player-ranking-cover/1200/720",
+        "publicId": "",
+        "alt": "BGMI Player Ranking cover",
+        "width": 1200,
+        "height": 720
+      },
+      "showAllCategory": true,
+      "topCategories": [
+        {
+          "id": "a317551c-3608-4f17-b00c-2490f433a29a",
+          "name": "Assaulter",
+          "colour": "#2563eb",
+          "order": 0,
+          "isActive": true
+        },
+        {
+          "id": "6872cb2e-fb61-46dc-9ea5-6ece08b21d5f",
+          "name": "Sniper",
+          "colour": "#16a34a",
+          "order": 1,
+          "isActive": true
+        },
+        {
+          "id": "89b65b39-827f-49fb-8cb0-e701c7803c9d",
+          "name": "Rusher",
+          "colour": "#d97706",
+          "order": 2,
+          "isActive": true
+        },
+        {
+          "id": "60b8f1e3-db93-474a-befb-cce2ad2c55e1",
+          "name": "Grenadier",
+          "colour": "#dc2626",
+          "order": 3,
+          "isActive": true
+        },
+        {
+          "id": "b76f6565-100c-41b9-b267-a8032c29443a",
+          "name": "Fragger",
+          "colour": "#7c3aed",
+          "order": 4,
+          "isActive": true
+        },
+        {
+          "id": "e2ef66cc-24c7-4bdf-8b2f-aff027737d21",
+          "name": "Camper",
+          "colour": "#334155",
+          "order": 5,
+          "isActive": true
+        }
+      ],
+      "tiers": [
+        {
+          "id": "02477dcb-a612-4271-8dff-d16c123dd901",
+          "label": "God Tier",
+          "backgroundColour": "#fef3c7",
+          "textColour": "#92400e",
+          "order": 0,
+          "isActive": true
+        },
+        {
+          "id": "f157d425-e565-4258-aeb8-40ab6be0559a",
+          "label": "Excellent",
+          "backgroundColour": "#dcfce7",
+          "textColour": "#166534",
+          "order": 1,
+          "isActive": true
+        },
+        {
+          "id": "40beadd4-f127-4d45-a973-e2692406fb73",
+          "label": "Good",
+          "backgroundColour": "#dbeafe",
+          "textColour": "#1d4ed8",
+          "order": 2,
+          "isActive": true
+        },
+        {
+          "id": "06367fe2-5655-4e09-93e9-8f80603416a9",
+          "label": "Overrated",
+          "backgroundColour": "#fee2e2",
+          "textColour": "#991b1b",
+          "order": 3,
+          "isActive": true
+        },
+        {
+          "id": "ad80f405-c45d-46d7-9ffa-4f864ed70e24",
+          "label": "Worst",
+          "backgroundColour": "#f1f5f9",
+          "textColour": "#334155",
+          "order": 4,
+          "isActive": true
+        }
+      ],
+      "items": [
+        {
+          "id": "11abcefc-5d8e-453b-ac24-8aba239ba97f",
+          "title": "Jonathan",
+          "description": "Jonathan sample ranking item",
+          "alt": "Jonathan image",
+          "image": {
+            "url": "https://picsum.photos/seed/bgmi-player-ranking-1/600/600",
+            "publicId": "",
+            "width": 600,
+            "height": 600
+          },
+          "categoryIds": [
+            "a317551c-3608-4f17-b00c-2490f433a29a",
+            "6872cb2e-fb61-46dc-9ea5-6ece08b21d5f"
+          ],
+          "order": 0
+        },
+        {
+          "id": "60253836-5a08-409c-9cc2-614b72005302",
+          "title": "Sarang",
+          "description": "Sarang sample ranking item",
+          "alt": "Sarang image",
+          "image": {
+            "url": "https://picsum.photos/seed/bgmi-player-ranking-2/600/600",
+            "publicId": "",
+            "width": 600,
+            "height": 600
+          },
+          "categoryIds": [
+            "6872cb2e-fb61-46dc-9ea5-6ece08b21d5f",
+            "89b65b39-827f-49fb-8cb0-e701c7803c9d"
+          ],
+          "order": 1
+        },
+        {
+          "id": "4fec0cae-c9f8-4975-88ca-f60a58aa7f2b",
+          "title": "Omega",
+          "description": "Omega sample ranking item",
+          "alt": "Omega image",
+          "image": {
+            "url": "https://picsum.photos/seed/bgmi-player-ranking-3/600/600",
+            "publicId": "",
+            "width": 600,
+            "height": 600
+          },
+          "categoryIds": [
+            "89b65b39-827f-49fb-8cb0-e701c7803c9d",
+            "60b8f1e3-db93-474a-befb-cce2ad2c55e1"
+          ],
+          "order": 2
+        },
+        {
+          "id": "341a7f76-9527-4f6b-af1c-f7ad466a0245",
+          "title": "Neyo",
+          "description": "Neyo sample ranking item",
+          "alt": "Neyo image",
+          "image": {
+            "url": "https://picsum.photos/seed/bgmi-player-ranking-4/600/600",
+            "publicId": "",
+            "width": 600,
+            "height": 600
+          },
+          "categoryIds": [
+            "60b8f1e3-db93-474a-befb-cce2ad2c55e1",
+            "b76f6565-100c-41b9-b267-a8032c29443a"
+          ],
+          "order": 3
+        },
+        {
+          "id": "98d8ee82-6766-44a6-ada1-87b097db3a8c",
+          "title": "Akshat",
+          "description": "Akshat sample ranking item",
+          "alt": "Akshat image",
+          "image": {
+            "url": "https://picsum.photos/seed/bgmi-player-ranking-5/600/600",
+            "publicId": "",
+            "width": 600,
+            "height": 600
+          },
+          "categoryIds": [
+            "b76f6565-100c-41b9-b267-a8032c29443a",
+            "a317551c-3608-4f17-b00c-2490f433a29a"
+          ],
+          "order": 4
+        },
+        {
+          "id": "83f35226-11e9-4c48-a113-3e61c127efc1",
+          "title": "Mavi",
+          "description": "Mavi sample ranking item",
+          "alt": "Mavi image",
+          "image": {
+            "url": "https://picsum.photos/seed/bgmi-player-ranking-6/600/600",
+            "publicId": "",
+            "width": 600,
+            "height": 600
+          },
+          "categoryIds": [
+            "a317551c-3608-4f17-b00c-2490f433a29a",
+            "6872cb2e-fb61-46dc-9ea5-6ece08b21d5f",
+            "e2ef66cc-24c7-4bdf-8b2f-aff027737d21"
+          ],
+          "order": 5
+        },
+        {
+          "id": "52c8cd8c-ddf0-4059-93b9-1b8b8429585f",
+          "title": "Scout",
+          "description": "Scout sample ranking item",
+          "alt": "Scout image",
+          "image": {
+            "url": "https://picsum.photos/seed/bgmi-player-ranking-7/600/600",
+            "publicId": "",
+            "width": 600,
+            "height": 600
+          },
+          "categoryIds": [
+            "6872cb2e-fb61-46dc-9ea5-6ece08b21d5f",
+            "89b65b39-827f-49fb-8cb0-e701c7803c9d"
+          ],
+          "order": 6
+        },
+        {
+          "id": "803907a7-3a4d-4309-a01c-2bd12e1a8d29",
+          "title": "Zgod",
+          "description": "Zgod sample ranking item",
+          "alt": "Zgod image",
+          "image": {
+            "url": "https://picsum.photos/seed/bgmi-player-ranking-8/600/600",
+            "publicId": "",
+            "width": 600,
+            "height": 600
+          },
+          "categoryIds": [
+            "89b65b39-827f-49fb-8cb0-e701c7803c9d",
+            "60b8f1e3-db93-474a-befb-cce2ad2c55e1"
+          ],
+          "order": 7
+        },
+        {
+          "id": "356630e1-2453-4010-aaa2-912f8bbde2d2",
+          "title": "NinjaJOD",
+          "description": "NinjaJOD sample ranking item",
+          "alt": "NinjaJOD image",
+          "image": {
+            "url": "https://picsum.photos/seed/bgmi-player-ranking-9/600/600",
+            "publicId": "",
+            "width": 600,
+            "height": 600
+          },
+          "categoryIds": [
+            "60b8f1e3-db93-474a-befb-cce2ad2c55e1",
+            "b76f6565-100c-41b9-b267-a8032c29443a"
+          ],
+          "order": 8
+        },
+        {
+          "id": "99a2d6a6-da35-4049-8112-b40d246584b0",
+          "title": "Shadow",
+          "description": "Shadow sample ranking item",
+          "alt": "Shadow image",
+          "image": {
+            "url": "https://picsum.photos/seed/bgmi-player-ranking-10/600/600",
+            "publicId": "",
+            "width": 600,
+            "height": 600
+          },
+          "categoryIds": [
+            "b76f6565-100c-41b9-b267-a8032c29443a",
+            "a317551c-3608-4f17-b00c-2490f433a29a"
+          ],
+          "order": 9
+        },
+        {
+          "id": "938ac838-cb09-4af9-a429-7e52c43f9819",
+          "title": "Aaru",
+          "description": "Aaru sample ranking item",
+          "alt": "Aaru image",
+          "image": {
+            "url": "https://picsum.photos/seed/bgmi-player-ranking-11/600/600",
+            "publicId": "",
+            "width": 600,
+            "height": 600
+          },
+          "categoryIds": [
+            "a317551c-3608-4f17-b00c-2490f433a29a",
+            "6872cb2e-fb61-46dc-9ea5-6ece08b21d5f"
+          ],
+          "order": 10
+        },
+        {
+          "id": "11bddd8e-91d8-4940-8690-cf7283346e36",
+          "title": "ClutchGod",
+          "description": "ClutchGod sample ranking item",
+          "alt": "ClutchGod image",
+          "image": {
+            "url": "https://picsum.photos/seed/bgmi-player-ranking-12/600/600",
+            "publicId": "",
+            "width": 600,
+            "height": 600
+          },
+          "categoryIds": [
+            "6872cb2e-fb61-46dc-9ea5-6ece08b21d5f",
+            "89b65b39-827f-49fb-8cb0-e701c7803c9d",
+            "e2ef66cc-24c7-4bdf-8b2f-aff027737d21"
+          ],
+          "order": 11
+        }
+      ],
+      "version": 2,
+      "status": "published",
+      "isActive": true,
+      "createdBy": "",
+      "publishedAt": "2026-07-28T05:21:45.239Z",
+      "createdAt": "2026-07-28T05:21:45.240Z",
+      "updatedAt": "2026-07-28T06:21:03.826Z"
+    },
+    {
+      "_id": "47c25f72-0906-498b-9d4c-daf370a206dc",
+      "name": "Football Player Ranking",
+      "slug": "football-player-ranking",
+      "heading": "Rank the Best Football Players",
+      "description": "Compare all-time football names in a fast tier-ranking board.",
+      "coverImage": {
+        "url": "https://picsum.photos/seed/football-player-ranking-cover/1200/720",
+        "publicId": "",
+        "alt": "Football Player Ranking cover",
+        "width": 1200,
+        "height": 720
+      },
+      "showAllCategory": true,
+      "topCategories": [
+        {
+          "id": "abdd3352-0da4-4635-9a0b-f5a653d17a62",
+          "name": "Forward",
+          "colour": "#2563eb",
+          "order": 0,
+          "isActive": true
+        },
+        {
+          "id": "f80bd5aa-d5bd-4037-bcad-61f1f7a16608",
+          "name": "Midfielder",
+          "colour": "#16a34a",
+          "order": 1,
+          "isActive": true
+        },
+        {
+          "id": "7a5afc5b-9dcc-428f-9be8-f0fc35d8ccf9",
+          "name": "Defender",
+          "colour": "#d97706",
+          "order": 2,
+          "isActive": true
+        },
+        {
+          "id": "b212f7a0-4f66-40a4-9a68-346180879f8d",
+          "name": "Goalkeeper",
+          "colour": "#dc2626",
+          "order": 3,
+          "isActive": true
+        },
+        {
+          "id": "902d785a-89a4-4321-9441-0a9b959dd281",
+          "name": "Playmaker",
+          "colour": "#7c3aed",
+          "order": 4,
+          "isActive": true
+        }
+      ],
+      "tiers": [
+        {
+          "id": "d2ba8a5c-5571-430f-a708-0b2e098a35bc",
+          "label": "God Tier",
+          "backgroundColour": "#fef3c7",
+          "textColour": "#92400e",
+          "order": 0,
+          "isActive": true
+        },
+        {
+          "id": "4e2690c9-c581-4ffc-b759-b00d53e967d7",
+          "label": "Excellent",
+          "backgroundColour": "#dcfce7",
+          "textColour": "#166534",
+          "order": 1,
+          "isActive": true
+        },
+        {
+          "id": "aacd6e8e-980f-41f6-9d3e-82fa1496688a",
+          "label": "Good",
+          "backgroundColour": "#dbeafe",
+          "textColour": "#1d4ed8",
+          "order": 2,
+          "isActive": true
+        },
+        {
+          "id": "22b4b9ca-dba1-4b83-adc2-9e19d206d2fb",
+          "label": "Overrated",
+          "backgroundColour": "#fee2e2",
+          "textColour": "#991b1b",
+          "order": 3,
+          "isActive": true
+        },
+        {
+          "id": "d5b95ade-1e72-433b-a5ba-be4281e773f2",
+          "label": "Worst",
+          "backgroundColour": "#f1f5f9",
+          "textColour": "#334155",
+          "order": 4,
+          "isActive": true
+        }
+      ],
+      "items": [
+        {
+          "id": "bc933414-4596-4f55-97cd-933b84f96756",
+          "title": "Messi",
+          "description": "Messi sample ranking item",
+          "alt": "Messi image",
+          "image": {
+            "url": "https://picsum.photos/seed/football-player-ranking-1/600/600",
+            "publicId": "",
+            "width": 600,
+            "height": 600
+          },
+          "categoryIds": [
+            "abdd3352-0da4-4635-9a0b-f5a653d17a62",
+            "f80bd5aa-d5bd-4037-bcad-61f1f7a16608"
+          ],
+          "order": 0
+        },
+        {
+          "id": "0d533669-39af-473d-bccc-ec680a94e1d3",
+          "title": "Ronaldo",
+          "description": "Ronaldo sample ranking item",
+          "alt": "Ronaldo image",
+          "image": {
+            "url": "https://picsum.photos/seed/football-player-ranking-2/600/600",
+            "publicId": "",
+            "width": 600,
+            "height": 600
+          },
+          "categoryIds": [
+            "f80bd5aa-d5bd-4037-bcad-61f1f7a16608",
+            "7a5afc5b-9dcc-428f-9be8-f0fc35d8ccf9"
+          ],
+          "order": 1
+        },
+        {
+          "id": "624b1832-86f5-43a4-91bb-25678442f393",
+          "title": "Pele",
+          "description": "Pele sample ranking item",
+          "alt": "Pele image",
+          "image": {
+            "url": "https://picsum.photos/seed/football-player-ranking-3/600/600",
+            "publicId": "",
+            "width": 600,
+            "height": 600
+          },
+          "categoryIds": [
+            "7a5afc5b-9dcc-428f-9be8-f0fc35d8ccf9",
+            "b212f7a0-4f66-40a4-9a68-346180879f8d"
+          ],
+          "order": 2
+        },
+        {
+          "id": "671f72d0-f363-47b2-93d7-9a73da578b08",
+          "title": "Maradona",
+          "description": "Maradona sample ranking item",
+          "alt": "Maradona image",
+          "image": {
+            "url": "https://picsum.photos/seed/football-player-ranking-4/600/600",
+            "publicId": "",
+            "width": 600,
+            "height": 600
+          },
+          "categoryIds": [
+            "b212f7a0-4f66-40a4-9a68-346180879f8d",
+            "902d785a-89a4-4321-9441-0a9b959dd281"
+          ],
+          "order": 3
+        },
+        {
+          "id": "f5b1ae8d-af9d-48d3-adb0-4137139c0eb0",
+          "title": "Zidane",
+          "description": "Zidane sample ranking item",
+          "alt": "Zidane image",
+          "image": {
+            "url": "https://picsum.photos/seed/football-player-ranking-5/600/600",
+            "publicId": "",
+            "width": 600,
+            "height": 600
+          },
+          "categoryIds": [
+            "902d785a-89a4-4321-9441-0a9b959dd281",
+            "abdd3352-0da4-4635-9a0b-f5a653d17a62"
+          ],
+          "order": 4
+        },
+        {
+          "id": "5c76309a-e91e-4051-841a-40c5d43b0350",
+          "title": "Cruyff",
+          "description": "Cruyff sample ranking item",
+          "alt": "Cruyff image",
+          "image": {
+            "url": "https://picsum.photos/seed/football-player-ranking-6/600/600",
+            "publicId": "",
+            "width": 600,
+            "height": 600
+          },
+          "categoryIds": [
+            "abdd3352-0da4-4635-9a0b-f5a653d17a62",
+            "f80bd5aa-d5bd-4037-bcad-61f1f7a16608"
+          ],
+          "order": 5
+        },
+        {
+          "id": "3b544ea3-35eb-4ad7-9e2e-bc851e262748",
+          "title": "Ronaldinho",
+          "description": "Ronaldinho sample ranking item",
+          "alt": "Ronaldinho image",
+          "image": {
+            "url": "https://picsum.photos/seed/football-player-ranking-7/600/600",
+            "publicId": "",
+            "width": 600,
+            "height": 600
+          },
+          "categoryIds": [
+            "f80bd5aa-d5bd-4037-bcad-61f1f7a16608",
+            "7a5afc5b-9dcc-428f-9be8-f0fc35d8ccf9"
+          ],
+          "order": 6
+        },
+        {
+          "id": "db3c227d-c8e8-4be2-abe9-37c56928f90e",
+          "title": "Mbappe",
+          "description": "Mbappe sample ranking item",
+          "alt": "Mbappe image",
+          "image": {
+            "url": "https://picsum.photos/seed/football-player-ranking-8/600/600",
+            "publicId": "",
+            "width": 600,
+            "height": 600
+          },
+          "categoryIds": [
+            "7a5afc5b-9dcc-428f-9be8-f0fc35d8ccf9",
+            "b212f7a0-4f66-40a4-9a68-346180879f8d"
+          ],
+          "order": 7
+        },
+        {
+          "id": "1d9483f1-d157-47ae-8fe2-9bf1715ba8ac",
+          "title": "Haaland",
+          "description": "Haaland sample ranking item",
+          "alt": "Haaland image",
+          "image": {
+            "url": "https://picsum.photos/seed/football-player-ranking-9/600/600",
+            "publicId": "",
+            "width": 600,
+            "height": 600
+          },
+          "categoryIds": [
+            "b212f7a0-4f66-40a4-9a68-346180879f8d",
+            "902d785a-89a4-4321-9441-0a9b959dd281"
+          ],
+          "order": 8
+        },
+        {
+          "id": "3d7d55d1-fbab-4fbe-8a99-4a1a23c3f5f3",
+          "title": "Neymar",
+          "description": "Neymar sample ranking item",
+          "alt": "Neymar image",
+          "image": {
+            "url": "https://picsum.photos/seed/football-player-ranking-10/600/600",
+            "publicId": "",
+            "width": 600,
+            "height": 600
+          },
+          "categoryIds": [
+            "902d785a-89a4-4321-9441-0a9b959dd281",
+            "abdd3352-0da4-4635-9a0b-f5a653d17a62"
+          ],
+          "order": 9
+        },
+        {
+          "id": "58ea6463-0047-46da-a1e1-f9cd5c32d9f4",
+          "title": "Modric",
+          "description": "Modric sample ranking item",
+          "alt": "Modric image",
+          "image": {
+            "url": "https://picsum.photos/seed/football-player-ranking-11/600/600",
+            "publicId": "",
+            "width": 600,
+            "height": 600
+          },
+          "categoryIds": [
+            "abdd3352-0da4-4635-9a0b-f5a653d17a62",
+            "f80bd5aa-d5bd-4037-bcad-61f1f7a16608"
+          ],
+          "order": 10
+        },
+        {
+          "id": "3845b7e0-e158-4381-9981-13d29dfa620b",
+          "title": "Iniesta",
+          "description": "Iniesta sample ranking item",
+          "alt": "Iniesta image",
+          "image": {
+            "url": "https://picsum.photos/seed/football-player-ranking-12/600/600",
+            "publicId": "",
+            "width": 600,
+            "height": 600
+          },
+          "categoryIds": [
+            "f80bd5aa-d5bd-4037-bcad-61f1f7a16608",
+            "7a5afc5b-9dcc-428f-9be8-f0fc35d8ccf9"
+          ],
+          "order": 11
+        }
+      ],
+      "version": 1,
+      "status": "published",
+      "isActive": true,
+      "createdBy": "",
+      "publishedAt": "2026-07-28T05:21:45.240Z",
+      "createdAt": "2026-07-28T05:21:45.240Z",
+      "updatedAt": "2026-07-28T05:21:45.240Z"
+    }
+  ]
+}

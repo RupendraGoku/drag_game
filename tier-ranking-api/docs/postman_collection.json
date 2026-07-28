@@ -1,0 +1,91 @@
+{
+  "info": {
+    "name": "Tier Ranking API",
+    "_postman_id": "4fd92a5d-0065-4fb0-a33f-tier-ranking",
+    "description": "Public and admin endpoints for the Tier Ranking Game platform.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:5000/api/v1" },
+    { "key": "accessToken", "value": "" },
+    { "key": "genreId", "value": "" },
+    { "key": "genreSlug", "value": "bgmi-player-ranking" }
+  ],
+  "item": [
+    {
+      "name": "Auth - Login",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\":\"admin@example.com\",\"password\":\"change-this-password\",\"rememberMe\":true}"
+        },
+        "url": "{{baseUrl}}/auth/login"
+      }
+    },
+    {
+      "name": "Auth - Refresh",
+      "request": { "method": "POST", "url": "{{baseUrl}}/auth/refresh" }
+    },
+    {
+      "name": "Public - Genres",
+      "request": { "method": "GET", "url": "{{baseUrl}}/genres" }
+    },
+    {
+      "name": "Public - Genre By Slug",
+      "request": { "method": "GET", "url": "{{baseUrl}}/genres/{{genreSlug}}" }
+    },
+    {
+      "name": "Admin - Dashboard Stats",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }],
+        "url": "{{baseUrl}}/admin/dashboard/stats"
+      }
+    },
+    {
+      "name": "Admin - List Genres",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }],
+        "url": "{{baseUrl}}/admin/genres"
+      }
+    },
+    {
+      "name": "Admin - Create Draft Genre",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{accessToken}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"Movies\",\"slug\":\"movies\",\"heading\":\"Rank the Best Movies\",\"status\":\"draft\",\"isActive\":true}"
+        },
+        "url": "{{baseUrl}}/admin/genres"
+      }
+    },
+    {
+      "name": "Admin - Upload Image",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }],
+        "body": {
+          "mode": "formdata",
+          "formdata": [{ "key": "image", "type": "file", "src": "" }]
+        },
+        "url": "{{baseUrl}}/admin/uploads/image"
+      }
+    },
+    {
+      "name": "Admin - Publish Genre",
+      "request": {
+        "method": "PATCH",
+        "header": [{ "key": "Authorization", "value": "Bearer {{accessToken}}" }],
+        "url": "{{baseUrl}}/admin/genres/{{genreId}}/publish"
+      }
+    }
+  ]
+}
