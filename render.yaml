@@ -1,0 +1,60 @@
+services:
+  - type: web
+    name: tier-ranking-api
+    runtime: node
+    buildCommand: cd tier-ranking-api && npm ci && npm run build
+    startCommand: cd tier-ranking-api && npm start
+    healthCheckPath: /health
+    envVars:
+      - key: DATA_STORE
+        value: mongo
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_ACCESS_SECRET
+        sync: false
+      - key: JWT_REFRESH_SECRET
+        sync: false
+      - key: PUBLIC_APP_URL
+        sync: false
+      - key: ADMIN_APP_URL
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false
+      - key: CLOUDINARY_CLOUD_NAME
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_SECRET
+        sync: false
+      - key: CLOUDINARY_FOLDER
+        value: tier-ranking
+      - key: ADMIN_SEED_USERS
+        sync: false
+
+  - type: web
+    name: tier-ranking-game
+    runtime: static
+    buildCommand: cd tier-ranking-game && npm ci && npm run build
+    staticPublishPath: tier-ranking-game/dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_BASE_URL
+        sync: false
+
+  - type: web
+    name: tier-ranking-admin
+    runtime: static
+    buildCommand: cd tier-ranking-admin && npm ci && npm run build
+    staticPublishPath: tier-ranking-admin/dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_BASE_URL
+        sync: false
+      - key: VITE_PUBLIC_GAME_URL
+        sync: false
