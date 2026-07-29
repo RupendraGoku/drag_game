@@ -70,7 +70,22 @@ const extractGenreObject = (parsed) => {
 };
 
 const normalizeImageRef = (value, fallbackAlt = '') => {
-  const rawUrl = typeof value === 'string' ? value : firstString(value?.url, value?.src, value?.href, value?.imageUrl);
+  const rawUrl =
+    typeof value === 'string'
+      ? value
+      : firstString(
+          value?.url,
+          value?.src,
+          value?.href,
+          value?.imageUrl,
+          value?.image_url,
+          value?.img,
+          value?.photo,
+          value?.poster,
+          value?.thumbnail,
+          value?.thumbnailUrl,
+          value?.thumbnail_url
+        );
   const url = isValidUrl(rawUrl) ? rawUrl.trim() : '';
 
   return {
@@ -168,7 +183,24 @@ const normalizeItems = (value, categories) => {
 
     const sourceItem = isObject(item) ? item : {};
     const title = firstString(sourceItem.title, sourceItem.name, sourceItem.label, sourceItem.alt) || `Item ${order + 1}`;
-    const image = normalizeImageRef(sourceItem.image || sourceItem.imageUrl || sourceItem.url || sourceItem.src, title);
+    const imageSource =
+      (typeof sourceItem.image === 'string' && sourceItem.image.trim()) || (isObject(sourceItem.image) && Object.keys(sourceItem.image).length)
+        ? sourceItem.image
+        : {
+            url: firstString(
+              sourceItem.imageUrl,
+              sourceItem.image_url,
+              sourceItem.img,
+              sourceItem.photo,
+              sourceItem.poster,
+              sourceItem.thumbnail,
+              sourceItem.thumbnailUrl,
+              sourceItem.thumbnail_url,
+              sourceItem.url,
+              sourceItem.src
+            )
+          };
+    const image = normalizeImageRef(imageSource, title);
 
     return {
       id: firstString(sourceItem.id) || crypto.randomUUID(),
@@ -187,7 +219,13 @@ const normalizeImportedGenre = (rawGenre, fallbackName) => {
   const topCategories = normalizeCategories(rawGenre.topCategories || rawGenre.categories || rawGenre.columns);
   const tiers = normalizeTiers(rawGenre.tiers || rawGenre.tierRows || rawGenre.rows);
   const items = normalizeItems(rawGenre.items || rawGenre.imageItems || rawGenre.entries, topCategories);
-  const coverImage = normalizeImageRef(rawGenre.coverImage || rawGenre.cover || rawGenre.coverUrl, name);
+  const coverSource =
+    rawGenre.coverImage ||
+    rawGenre.cover ||
+    {
+      url: firstString(rawGenre.coverUrl, rawGenre.cover_url, rawGenre.cover, rawGenre.imageUrl, rawGenre.image_url, rawGenre.poster)
+    };
+  const coverImage = normalizeImageRef(coverSource, name);
 
   return {
     name,

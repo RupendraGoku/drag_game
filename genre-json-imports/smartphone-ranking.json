@@ -1,0 +1,120 @@
+{
+  "name": "Smartphone Ranking",
+  "slug": "smartphone-ranking",
+  "heading": "Rank the Best Smartphones",
+  "description": "Compare popular smartphones by performance, camera, battery, and value.",
+  "categories": [
+    "Flagship",
+    "Camera",
+    "Gaming",
+    "Battery",
+    "Budget",
+    "Foldable"
+  ],
+  "tiers": [
+    "Best Overall",
+    "Excellent",
+    "Good",
+    "Average",
+    "Poor Value"
+  ],
+  "items": [
+    {
+      "title": "iPhone 15 Pro Max",
+      "imageUrl": "https://picsum.photos/seed/smartphone-ranking-1/600/600",
+      "alt": "iPhone 15 Pro Max image"
+    },
+    {
+      "title": "iPhone 15",
+      "imageUrl": "https://picsum.photos/seed/smartphone-ranking-2/600/600",
+      "alt": "iPhone 15 image"
+    },
+    {
+      "title": "Samsung Galaxy S24 Ultra",
+      "imageUrl": "https://picsum.photos/seed/smartphone-ranking-3/600/600",
+      "alt": "Samsung Galaxy S24 Ultra image"
+    },
+    {
+      "title": "Samsung Galaxy S24",
+      "imageUrl": "https://picsum.photos/seed/smartphone-ranking-4/600/600",
+      "alt": "Samsung Galaxy S24 image"
+    },
+    {
+      "title": "Google Pixel 8 Pro",
+      "imageUrl": "https://picsum.photos/seed/smartphone-ranking-5/600/600",
+      "alt": "Google Pixel 8 Pro image"
+    },
+    {
+      "title": "OnePlus 12",
+      "imageUrl": "https://picsum.photos/seed/smartphone-ranking-6/600/600",
+      "alt": "OnePlus 12 image"
+    },
+    {
+      "title": "Xiaomi 14 Ultra",
+      "imageUrl": "https://picsum.photos/seed/smartphone-ranking-7/600/600",
+      "alt": "Xiaomi 14 Ultra image"
+    },
+    {
+      "title": "Vivo X100 Pro",
+      "imageUrl": "https://picsum.photos/seed/smartphone-ranking-8/600/600",
+      "alt": "Vivo X100 Pro image"
+    },
+    {
+      "title": "Oppo Find X7 Ultra",
+      "imageUrl": "https://picsum.photos/seed/smartphone-ranking-9/600/600",
+      "alt": "Oppo Find X7 Ultra image"
+    },
+    {
+      "title": "Nothing Phone 2",
+      "imageUrl": "https://picsum.photos/seed/smartphone-ranking-10/600/600",
+      "alt": "Nothing Phone 2 image"
+    },
+    {
+      "title": "Motorola Edge 50 Pro",
+      "imageUrl": "https://picsum.photos/seed/smartphone-ranking-11/600/600",
+      "alt": "Motorola Edge 50 Pro image"
+    },
+    {
+      "title": "Realme GT 6",
+      "imageUrl": "https://picsum.photos/seed/smartphone-ranking-12/600/600",
+      "alt": "Realme GT 6 image"
+    },
+    {
+      "title": "iQOO 12",
+      "imageUrl": "https://picsum.photos/seed/smartphone-ranking-13/600/600",
+      "alt": "iQOO 12 image"
+    },
+    {
+      "title": "Samsung Galaxy Z Fold 5",
+      "imageUrl": "https://picsum.photos/seed/smartphone-ranking-14/600/600",
+      "alt": "Samsung Galaxy Z Fold 5 image"
+    },
+    {
+      "title": "Samsung Galaxy Z Flip 5",
+      "imageUrl": "https://picsum.photos/seed/smartphone-ranking-15/600/600",
+      "alt": "Samsung Galaxy Z Flip 5 image"
+    },
+    {
+      "title": "Redmi Note 13 Pro",
+      "imageUrl": "https://picsum.photos/seed/smartphone-ranking-16/600/600",
+      "alt": "Redmi Note 13 Pro image"
+    },
+    {
+      "title": "Poco X6 Pro",
+      "imageUrl": "https://picsum.photos/seed/smartphone-ranking-17/600/600",
+      "alt": "Poco X6 Pro image"
+    },
+    {
+      "title": "Asus ROG Phone 8",
+      "imageUrl": "https://picsum.photos/seed/smartphone-ranking-18/600/600",
+      "alt": "Asus ROG Phone 8 image"
+    }
+  ],
+  "status": "draft",
+  "coverImage": {
+    "url": "https://picsum.photos/seed/smartphone-ranking-cover/1200/720",
+    "alt": "Smartphone Ranking cover",
+    "width": 1200,
+    "height": 720
+  }
+}

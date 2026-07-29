@@ -1,0 +1,120 @@
+{
+  "name": "Cricket Player Ranking",
+  "slug": "cricket-player-ranking",
+  "heading": "Rank the Best Cricket Players",
+  "description": "Rank famous cricket players by skill, impact, and legacy.",
+  "categories": [
+    "Batter",
+    "Bowler",
+    "All-Rounder",
+    "Wicketkeeper",
+    "Captain",
+    "Finisher"
+  ],
+  "tiers": [
+    "GOAT Tier",
+    "Elite",
+    "Great",
+    "Good",
+    "Overrated"
+  ],
+  "items": [
+    {
+      "title": "Virat Kohli",
+      "imageUrl": "https://picsum.photos/seed/cricket-player-ranking-1/600/600",
+      "alt": "Virat Kohli image"
+    },
+    {
+      "title": "MS Dhoni",
+      "imageUrl": "https://picsum.photos/seed/cricket-player-ranking-2/600/600",
+      "alt": "MS Dhoni image"
+    },
+    {
+      "title": "Sachin Tendulkar",
+      "imageUrl": "https://picsum.photos/seed/cricket-player-ranking-3/600/600",
+      "alt": "Sachin Tendulkar image"
+    },
+    {
+      "title": "Rohit Sharma",
+      "imageUrl": "https://picsum.photos/seed/cricket-player-ranking-4/600/600",
+      "alt": "Rohit Sharma image"
+    },
+    {
+      "title": "AB de Villiers",
+      "imageUrl": "https://picsum.photos/seed/cricket-player-ranking-5/600/600",
+      "alt": "AB de Villiers image"
+    },
+    {
+      "title": "Chris Gayle",
+      "imageUrl": "https://picsum.photos/seed/cricket-player-ranking-6/600/600",
+      "alt": "Chris Gayle image"
+    },
+    {
+      "title": "Kane Williamson",
+      "imageUrl": "https://picsum.photos/seed/cricket-player-ranking-7/600/600",
+      "alt": "Kane Williamson image"
+    },
+    {
+      "title": "Steve Smith",
+      "imageUrl": "https://picsum.photos/seed/cricket-player-ranking-8/600/600",
+      "alt": "Steve Smith image"
+    },
+    {
+      "title": "Babar Azam",
+      "imageUrl": "https://picsum.photos/seed/cricket-player-ranking-9/600/600",
+      "alt": "Babar Azam image"
+    },
+    {
+      "title": "Ben Stokes",
+      "imageUrl": "https://picsum.photos/seed/cricket-player-ranking-10/600/600",
+      "alt": "Ben Stokes image"
+    },
+    {
+      "title": "Hardik Pandya",
+      "imageUrl": "https://picsum.photos/seed/cricket-player-ranking-11/600/600",
+      "alt": "Hardik Pandya image"
+    },
+    {
+      "title": "Jasprit Bumrah",
+      "imageUrl": "https://picsum.photos/seed/cricket-player-ranking-12/600/600",
+      "alt": "Jasprit Bumrah image"
+    },
+    {
+      "title": "Rashid Khan",
+      "imageUrl": "https://picsum.photos/seed/cricket-player-ranking-13/600/600",
+      "alt": "Rashid Khan image"
+    },
+    {
+      "title": "Lasith Malinga",
+      "imageUrl": "https://picsum.photos/seed/cricket-player-ranking-14/600/600",
+      "alt": "Lasith Malinga image"
+    },
+    {
+      "title": "Shane Warne",
+      "imageUrl": "https://picsum.photos/seed/cricket-player-ranking-15/600/600",
+      "alt": "Shane Warne image"
+    },
+    {
+      "title": "Muttiah Muralitharan",
+      "imageUrl": "https://picsum.photos/seed/cricket-player-ranking-16/600/600",
+      "alt": "Muttiah Muralitharan image"
+    },
+    {
+      "title": "Jacques Kallis",
+      "imageUrl": "https://picsum.photos/seed/cricket-player-ranking-17/600/600",
+      "alt": "Jacques Kallis image"
+    },
+    {
+      "title": "Yuvraj Singh",
+      "imageUrl": "https://picsum.photos/seed/cricket-player-ranking-18/600/600",
+      "alt": "Yuvraj Singh image"
+    }
+  ],
+  "status": "draft",
+  "coverImage": {
+    "url": "https://picsum.photos/seed/cricket-player-ranking-cover/1200/720",
+    "alt": "Cricket Player Ranking cover",
+    "width": 1200,
+    "height": 720
+  }
+}

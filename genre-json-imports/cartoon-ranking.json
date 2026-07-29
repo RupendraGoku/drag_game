@@ -1,0 +1,120 @@
+{
+  "name": "Cartoon Ranking",
+  "slug": "cartoon-ranking",
+  "heading": "Rank the Best Cartoons",
+  "description": "Build a ranking board for famous cartoon shows and animated series.",
+  "categories": [
+    "Classic",
+    "Comedy",
+    "Adventure",
+    "Superhero",
+    "Anime Style",
+    "Kids"
+  ],
+  "tiers": [
+    "Legendary",
+    "Top Tier",
+    "Fun",
+    "Okay",
+    "Not For Me"
+  ],
+  "items": [
+    {
+      "title": "Tom and Jerry",
+      "imageUrl": "https://picsum.photos/seed/cartoon-ranking-1/600/600",
+      "alt": "Tom and Jerry image"
+    },
+    {
+      "title": "SpongeBob SquarePants",
+      "imageUrl": "https://picsum.photos/seed/cartoon-ranking-2/600/600",
+      "alt": "SpongeBob SquarePants image"
+    },
+    {
+      "title": "Ben 10",
+      "imageUrl": "https://picsum.photos/seed/cartoon-ranking-3/600/600",
+      "alt": "Ben 10 image"
+    },
+    {
+      "title": "Doraemon",
+      "imageUrl": "https://picsum.photos/seed/cartoon-ranking-4/600/600",
+      "alt": "Doraemon image"
+    },
+    {
+      "title": "Pokemon",
+      "imageUrl": "https://picsum.photos/seed/cartoon-ranking-5/600/600",
+      "alt": "Pokemon image"
+    },
+    {
+      "title": "Dragon Ball Z",
+      "imageUrl": "https://picsum.photos/seed/cartoon-ranking-6/600/600",
+      "alt": "Dragon Ball Z image"
+    },
+    {
+      "title": "Naruto",
+      "imageUrl": "https://picsum.photos/seed/cartoon-ranking-7/600/600",
+      "alt": "Naruto image"
+    },
+    {
+      "title": "The Powerpuff Girls",
+      "imageUrl": "https://picsum.photos/seed/cartoon-ranking-8/600/600",
+      "alt": "The Powerpuff Girls image"
+    },
+    {
+      "title": "Scooby-Doo",
+      "imageUrl": "https://picsum.photos/seed/cartoon-ranking-9/600/600",
+      "alt": "Scooby-Doo image"
+    },
+    {
+      "title": "Looney Tunes",
+      "imageUrl": "https://picsum.photos/seed/cartoon-ranking-10/600/600",
+      "alt": "Looney Tunes image"
+    },
+    {
+      "title": "Teen Titans",
+      "imageUrl": "https://picsum.photos/seed/cartoon-ranking-11/600/600",
+      "alt": "Teen Titans image"
+    },
+    {
+      "title": "Avatar: The Last Airbender",
+      "imageUrl": "https://picsum.photos/seed/cartoon-ranking-12/600/600",
+      "alt": "Avatar: The Last Airbender image"
+    },
+    {
+      "title": "Phineas and Ferb",
+      "imageUrl": "https://picsum.photos/seed/cartoon-ranking-13/600/600",
+      "alt": "Phineas and Ferb image"
+    },
+    {
+      "title": "Oggy and the Cockroaches",
+      "imageUrl": "https://picsum.photos/seed/cartoon-ranking-14/600/600",
+      "alt": "Oggy and the Cockroaches image"
+    },
+    {
+      "title": "Shinchan",
+      "imageUrl": "https://picsum.photos/seed/cartoon-ranking-15/600/600",
+      "alt": "Shinchan image"
+    },
+    {
+      "title": "Mickey Mouse",
+      "imageUrl": "https://picsum.photos/seed/cartoon-ranking-16/600/600",
+      "alt": "Mickey Mouse image"
+    },
+    {
+      "title": "Rick and Morty",
+      "imageUrl": "https://picsum.photos/seed/cartoon-ranking-17/600/600",
+      "alt": "Rick and Morty image"
+    },
+    {
+      "title": "The Simpsons",
+      "imageUrl": "https://picsum.photos/seed/cartoon-ranking-18/600/600",
+      "alt": "The Simpsons image"
+    }
+  ],
+  "status": "draft",
+  "coverImage": {
+    "url": "https://picsum.photos/seed/cartoon-ranking-cover/1200/720",
+    "alt": "Cartoon Ranking cover",
+    "width": 1200,
+    "height": 720
+  }
+}

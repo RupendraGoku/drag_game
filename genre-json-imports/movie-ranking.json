@@ -1,0 +1,120 @@
+{
+  "name": "Movie Ranking",
+  "slug": "movie-ranking",
+  "heading": "Rank the Best Movies",
+  "description": "Create a tier list for popular movies across genres and eras.",
+  "categories": [
+    "Action",
+    "Drama",
+    "Comedy",
+    "Sci-Fi",
+    "Horror",
+    "Animated"
+  ],
+  "tiers": [
+    "Masterpiece",
+    "Excellent",
+    "Good",
+    "Average",
+    "Skip"
+  ],
+  "items": [
+    {
+      "title": "The Shawshank Redemption",
+      "imageUrl": "https://picsum.photos/seed/movie-ranking-1/600/600",
+      "alt": "The Shawshank Redemption image"
+    },
+    {
+      "title": "The Godfather",
+      "imageUrl": "https://picsum.photos/seed/movie-ranking-2/600/600",
+      "alt": "The Godfather image"
+    },
+    {
+      "title": "The Dark Knight",
+      "imageUrl": "https://picsum.photos/seed/movie-ranking-3/600/600",
+      "alt": "The Dark Knight image"
+    },
+    {
+      "title": "Inception",
+      "imageUrl": "https://picsum.photos/seed/movie-ranking-4/600/600",
+      "alt": "Inception image"
+    },
+    {
+      "title": "Interstellar",
+      "imageUrl": "https://picsum.photos/seed/movie-ranking-5/600/600",
+      "alt": "Interstellar image"
+    },
+    {
+      "title": "Titanic",
+      "imageUrl": "https://picsum.photos/seed/movie-ranking-6/600/600",
+      "alt": "Titanic image"
+    },
+    {
+      "title": "Avatar",
+      "imageUrl": "https://picsum.photos/seed/movie-ranking-7/600/600",
+      "alt": "Avatar image"
+    },
+    {
+      "title": "Avengers: Endgame",
+      "imageUrl": "https://picsum.photos/seed/movie-ranking-8/600/600",
+      "alt": "Avengers: Endgame image"
+    },
+    {
+      "title": "Jurassic Park",
+      "imageUrl": "https://picsum.photos/seed/movie-ranking-9/600/600",
+      "alt": "Jurassic Park image"
+    },
+    {
+      "title": "Forrest Gump",
+      "imageUrl": "https://picsum.photos/seed/movie-ranking-10/600/600",
+      "alt": "Forrest Gump image"
+    },
+    {
+      "title": "The Matrix",
+      "imageUrl": "https://picsum.photos/seed/movie-ranking-11/600/600",
+      "alt": "The Matrix image"
+    },
+    {
+      "title": "Gladiator",
+      "imageUrl": "https://picsum.photos/seed/movie-ranking-12/600/600",
+      "alt": "Gladiator image"
+    },
+    {
+      "title": "Parasite",
+      "imageUrl": "https://picsum.photos/seed/movie-ranking-13/600/600",
+      "alt": "Parasite image"
+    },
+    {
+      "title": "Joker",
+      "imageUrl": "https://picsum.photos/seed/movie-ranking-14/600/600",
+      "alt": "Joker image"
+    },
+    {
+      "title": "Toy Story",
+      "imageUrl": "https://picsum.photos/seed/movie-ranking-15/600/600",
+      "alt": "Toy Story image"
+    },
+    {
+      "title": "Spider-Man: No Way Home",
+      "imageUrl": "https://picsum.photos/seed/movie-ranking-16/600/600",
+      "alt": "Spider-Man: No Way Home image"
+    },
+    {
+      "title": "Black Panther",
+      "imageUrl": "https://picsum.photos/seed/movie-ranking-17/600/600",
+      "alt": "Black Panther image"
+    },
+    {
+      "title": "Oppenheimer",
+      "imageUrl": "https://picsum.photos/seed/movie-ranking-18/600/600",
+      "alt": "Oppenheimer image"
+    }
+  ],
+  "status": "draft",
+  "coverImage": {
+    "url": "https://picsum.photos/seed/movie-ranking-cover/1200/720",
+    "alt": "Movie Ranking cover",
+    "width": 1200,
+    "height": 720
+  }
+}

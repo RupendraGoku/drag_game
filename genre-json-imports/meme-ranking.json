@@ -1,0 +1,120 @@
+{
+  "name": "Meme Ranking",
+  "slug": "meme-ranking",
+  "heading": "Rank the Best Memes",
+  "description": "Create a fun tier list for famous internet meme formats.",
+  "categories": [
+    "Reaction",
+    "Classic",
+    "Gaming",
+    "Animal",
+    "Indian",
+    "Absurd"
+  ],
+  "tiers": [
+    "Peak Meme",
+    "Hilarious",
+    "Good",
+    "Overused",
+    "Dead Meme"
+  ],
+  "items": [
+    {
+      "title": "Distracted Boyfriend",
+      "imageUrl": "https://picsum.photos/seed/meme-ranking-1/600/600",
+      "alt": "Distracted Boyfriend image"
+    },
+    {
+      "title": "Doge",
+      "imageUrl": "https://picsum.photos/seed/meme-ranking-2/600/600",
+      "alt": "Doge image"
+    },
+    {
+      "title": "Pepe the Frog",
+      "imageUrl": "https://picsum.photos/seed/meme-ranking-3/600/600",
+      "alt": "Pepe the Frog image"
+    },
+    {
+      "title": "Drake Hotline Bling",
+      "imageUrl": "https://picsum.photos/seed/meme-ranking-4/600/600",
+      "alt": "Drake Hotline Bling image"
+    },
+    {
+      "title": "Woman Yelling at Cat",
+      "imageUrl": "https://picsum.photos/seed/meme-ranking-5/600/600",
+      "alt": "Woman Yelling at Cat image"
+    },
+    {
+      "title": "This Is Fine",
+      "imageUrl": "https://picsum.photos/seed/meme-ranking-6/600/600",
+      "alt": "This Is Fine image"
+    },
+    {
+      "title": "Success Kid",
+      "imageUrl": "https://picsum.photos/seed/meme-ranking-7/600/600",
+      "alt": "Success Kid image"
+    },
+    {
+      "title": "Hide the Pain Harold",
+      "imageUrl": "https://picsum.photos/seed/meme-ranking-8/600/600",
+      "alt": "Hide the Pain Harold image"
+    },
+    {
+      "title": "Mocking SpongeBob",
+      "imageUrl": "https://picsum.photos/seed/meme-ranking-9/600/600",
+      "alt": "Mocking SpongeBob image"
+    },
+    {
+      "title": "Galaxy Brain",
+      "imageUrl": "https://picsum.photos/seed/meme-ranking-10/600/600",
+      "alt": "Galaxy Brain image"
+    },
+    {
+      "title": "Two Buttons",
+      "imageUrl": "https://picsum.photos/seed/meme-ranking-11/600/600",
+      "alt": "Two Buttons image"
+    },
+    {
+      "title": "Expanding Brain",
+      "imageUrl": "https://picsum.photos/seed/meme-ranking-12/600/600",
+      "alt": "Expanding Brain image"
+    },
+    {
+      "title": "Roll Safe",
+      "imageUrl": "https://picsum.photos/seed/meme-ranking-13/600/600",
+      "alt": "Roll Safe image"
+    },
+    {
+      "title": "Surprised Pikachu",
+      "imageUrl": "https://picsum.photos/seed/meme-ranking-14/600/600",
+      "alt": "Surprised Pikachu image"
+    },
+    {
+      "title": "Change My Mind",
+      "imageUrl": "https://picsum.photos/seed/meme-ranking-15/600/600",
+      "alt": "Change My Mind image"
+    },
+    {
+      "title": "Is This a Pigeon",
+      "imageUrl": "https://picsum.photos/seed/meme-ranking-16/600/600",
+      "alt": "Is This a Pigeon image"
+    },
+    {
+      "title": "Elon Musk Memes",
+      "imageUrl": "https://picsum.photos/seed/meme-ranking-17/600/600",
+      "alt": "Elon Musk Memes image"
+    },
+    {
+      "title": "Indian Uncle Memes",
+      "imageUrl": "https://picsum.photos/seed/meme-ranking-18/600/600",
+      "alt": "Indian Uncle Memes image"
+    }
+  ],
+  "status": "draft",
+  "coverImage": {
+    "url": "https://picsum.photos/seed/meme-ranking-cover/1200/720",
+    "alt": "Meme Ranking cover",
+    "width": 1200,
+    "height": 720
+  }
+}

@@ -35,6 +35,10 @@ export function ImageItemEditor({ item, categories, onChange, onDelete }) {
     onChange({ ...item, categoryIds: Array.from(current) });
   };
 
+  const setImageUrl = (url) => {
+    onChange({ ...item, image: { ...(item.image || {}), url }, alt: item.alt || item.title });
+  };
+
   return (
     <article ref={setNodeRef} style={style} className={`rounded-lg border border-[#d8dee7] bg-white p-3 ${isDragging ? 'opacity-60' : ''}`}>
       <div className="grid gap-3 lg:grid-cols-[36px_140px_1fr_44px]">
@@ -57,6 +61,10 @@ export function ImageItemEditor({ item, categories, onChange, onDelete }) {
           <div>
             <label className="field-label">Item title</label>
             <input className="field-input" value={item.title} onChange={(event) => onChange({ ...item, title: event.target.value })} />
+          </div>
+          <div>
+            <label className="field-label">Image URL</label>
+            <input className="field-input" value={item.image?.url || ''} onChange={(event) => setImageUrl(event.target.value)} placeholder="https://example.com/image.jpg" />
           </div>
           <div>
             <label className="field-label">Alt text</label>

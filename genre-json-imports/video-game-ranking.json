@@ -1,0 +1,120 @@
+{
+  "name": "Video Game Ranking",
+  "slug": "video-game-ranking",
+  "heading": "Rank the Best Video Games",
+  "description": "Compare famous console and PC games in a tier-ranking format.",
+  "categories": [
+    "Action",
+    "Adventure",
+    "RPG",
+    "Shooter",
+    "Sports",
+    "Sandbox"
+  ],
+  "tiers": [
+    "All Time Great",
+    "Excellent",
+    "Solid",
+    "Average",
+    "Weak"
+  ],
+  "items": [
+    {
+      "title": "Minecraft",
+      "imageUrl": "https://picsum.photos/seed/video-game-ranking-1/600/600",
+      "alt": "Minecraft image"
+    },
+    {
+      "title": "Grand Theft Auto V",
+      "imageUrl": "https://picsum.photos/seed/video-game-ranking-2/600/600",
+      "alt": "Grand Theft Auto V image"
+    },
+    {
+      "title": "The Legend of Zelda: Breath of the Wild",
+      "imageUrl": "https://picsum.photos/seed/video-game-ranking-3/600/600",
+      "alt": "The Legend of Zelda: Breath of the Wild image"
+    },
+    {
+      "title": "Red Dead Redemption 2",
+      "imageUrl": "https://picsum.photos/seed/video-game-ranking-4/600/600",
+      "alt": "Red Dead Redemption 2 image"
+    },
+    {
+      "title": "God of War",
+      "imageUrl": "https://picsum.photos/seed/video-game-ranking-5/600/600",
+      "alt": "God of War image"
+    },
+    {
+      "title": "Elden Ring",
+      "imageUrl": "https://picsum.photos/seed/video-game-ranking-6/600/600",
+      "alt": "Elden Ring image"
+    },
+    {
+      "title": "Fortnite",
+      "imageUrl": "https://picsum.photos/seed/video-game-ranking-7/600/600",
+      "alt": "Fortnite image"
+    },
+    {
+      "title": "Call of Duty: Warzone",
+      "imageUrl": "https://picsum.photos/seed/video-game-ranking-8/600/600",
+      "alt": "Call of Duty: Warzone image"
+    },
+    {
+      "title": "FIFA",
+      "imageUrl": "https://picsum.photos/seed/video-game-ranking-9/600/600",
+      "alt": "FIFA image"
+    },
+    {
+      "title": "The Witcher 3",
+      "imageUrl": "https://picsum.photos/seed/video-game-ranking-10/600/600",
+      "alt": "The Witcher 3 image"
+    },
+    {
+      "title": "Cyberpunk 2077",
+      "imageUrl": "https://picsum.photos/seed/video-game-ranking-11/600/600",
+      "alt": "Cyberpunk 2077 image"
+    },
+    {
+      "title": "Resident Evil 4",
+      "imageUrl": "https://picsum.photos/seed/video-game-ranking-12/600/600",
+      "alt": "Resident Evil 4 image"
+    },
+    {
+      "title": "Super Mario Odyssey",
+      "imageUrl": "https://picsum.photos/seed/video-game-ranking-13/600/600",
+      "alt": "Super Mario Odyssey image"
+    },
+    {
+      "title": "Valorant",
+      "imageUrl": "https://picsum.photos/seed/video-game-ranking-14/600/600",
+      "alt": "Valorant image"
+    },
+    {
+      "title": "Counter-Strike 2",
+      "imageUrl": "https://picsum.photos/seed/video-game-ranking-15/600/600",
+      "alt": "Counter-Strike 2 image"
+    },
+    {
+      "title": "League of Legends",
+      "imageUrl": "https://picsum.photos/seed/video-game-ranking-16/600/600",
+      "alt": "League of Legends image"
+    },
+    {
+      "title": "Apex Legends",
+      "imageUrl": "https://picsum.photos/seed/video-game-ranking-17/600/600",
+      "alt": "Apex Legends image"
+    },
+    {
+      "title": "Among Us",
+      "imageUrl": "https://picsum.photos/seed/video-game-ranking-18/600/600",
+      "alt": "Among Us image"
+    }
+  ],
+  "status": "draft",
+  "coverImage": {
+    "url": "https://picsum.photos/seed/video-game-ranking-cover/1200/720",
+    "alt": "Video Game Ranking cover",
+    "width": 1200,
+    "height": 720
+  }
+}

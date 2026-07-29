@@ -1,0 +1,120 @@
+{
+  "name": "Football Player Ranking",
+  "slug": "football-player-ranking",
+  "heading": "Rank the Best Football Players",
+  "description": "Create a tier list for all-time and modern football stars.",
+  "categories": [
+    "Forward",
+    "Midfielder",
+    "Defender",
+    "Goalkeeper",
+    "Playmaker",
+    "Finisher"
+  ],
+  "tiers": [
+    "GOAT Tier",
+    "World Class",
+    "Great",
+    "Good",
+    "Overrated"
+  ],
+  "items": [
+    {
+      "title": "Lionel Messi",
+      "imageUrl": "https://picsum.photos/seed/football-player-ranking-1/600/600",
+      "alt": "Lionel Messi image"
+    },
+    {
+      "title": "Cristiano Ronaldo",
+      "imageUrl": "https://picsum.photos/seed/football-player-ranking-2/600/600",
+      "alt": "Cristiano Ronaldo image"
+    },
+    {
+      "title": "Pele",
+      "imageUrl": "https://picsum.photos/seed/football-player-ranking-3/600/600",
+      "alt": "Pele image"
+    },
+    {
+      "title": "Diego Maradona",
+      "imageUrl": "https://picsum.photos/seed/football-player-ranking-4/600/600",
+      "alt": "Diego Maradona image"
+    },
+    {
+      "title": "Zinedine Zidane",
+      "imageUrl": "https://picsum.photos/seed/football-player-ranking-5/600/600",
+      "alt": "Zinedine Zidane image"
+    },
+    {
+      "title": "Johan Cruyff",
+      "imageUrl": "https://picsum.photos/seed/football-player-ranking-6/600/600",
+      "alt": "Johan Cruyff image"
+    },
+    {
+      "title": "Ronaldinho",
+      "imageUrl": "https://picsum.photos/seed/football-player-ranking-7/600/600",
+      "alt": "Ronaldinho image"
+    },
+    {
+      "title": "Kylian Mbappe",
+      "imageUrl": "https://picsum.photos/seed/football-player-ranking-8/600/600",
+      "alt": "Kylian Mbappe image"
+    },
+    {
+      "title": "Erling Haaland",
+      "imageUrl": "https://picsum.photos/seed/football-player-ranking-9/600/600",
+      "alt": "Erling Haaland image"
+    },
+    {
+      "title": "Neymar",
+      "imageUrl": "https://picsum.photos/seed/football-player-ranking-10/600/600",
+      "alt": "Neymar image"
+    },
+    {
+      "title": "Luka Modric",
+      "imageUrl": "https://picsum.photos/seed/football-player-ranking-11/600/600",
+      "alt": "Luka Modric image"
+    },
+    {
+      "title": "Andres Iniesta",
+      "imageUrl": "https://picsum.photos/seed/football-player-ranking-12/600/600",
+      "alt": "Andres Iniesta image"
+    },
+    {
+      "title": "Xavi",
+      "imageUrl": "https://picsum.photos/seed/football-player-ranking-13/600/600",
+      "alt": "Xavi image"
+    },
+    {
+      "title": "Sergio Ramos",
+      "imageUrl": "https://picsum.photos/seed/football-player-ranking-14/600/600",
+      "alt": "Sergio Ramos image"
+    },
+    {
+      "title": "Manuel Neuer",
+      "imageUrl": "https://picsum.photos/seed/football-player-ranking-15/600/600",
+      "alt": "Manuel Neuer image"
+    },
+    {
+      "title": "Gianluigi Buffon",
+      "imageUrl": "https://picsum.photos/seed/football-player-ranking-16/600/600",
+      "alt": "Gianluigi Buffon image"
+    },
+    {
+      "title": "Karim Benzema",
+      "imageUrl": "https://picsum.photos/seed/football-player-ranking-17/600/600",
+      "alt": "Karim Benzema image"
+    },
+    {
+      "title": "Thierry Henry",
+      "imageUrl": "https://picsum.photos/seed/football-player-ranking-18/600/600",
+      "alt": "Thierry Henry image"
+    }
+  ],
+  "status": "draft",
+  "coverImage": {
+    "url": "https://picsum.photos/seed/football-player-ranking-cover/1200/720",
+    "alt": "Football Player Ranking cover",
+    "width": 1200,
+    "height": 720
+  }
+}

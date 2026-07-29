@@ -37,6 +37,11 @@ export function BasicInformationSection({
     }
   };
 
+  const setCoverUrl = (url) => {
+    setCoverImage({ ...(coverImage || {}), url, alt: coverImage?.alt || '' });
+    markDirty();
+  };
+
   return (
     <section className="surface p-5">
       <div className="mb-5">
@@ -86,6 +91,10 @@ export function BasicInformationSection({
               <ImagePlus size={16} aria-hidden="true" />
               Upload cover
               <input className="sr-only" type="file" accept="image/jpeg,image/png,image/webp" onChange={(event) => uploadCover(event.target.files?.[0])} />
+            </label>
+            <label className="mt-3 block">
+              <span className="field-label">Cover image URL</span>
+              <input className="field-input" value={coverImage?.url || ''} onChange={(event) => setCoverUrl(event.target.value)} placeholder="https://example.com/cover.jpg" />
             </label>
           </div>
           <FormError>{serverErrors.coverImage}</FormError>

@@ -1,0 +1,120 @@
+{
+  "name": "Mobile Game Ranking",
+  "slug": "mobile-game-ranking",
+  "heading": "Rank the Best Mobile Games",
+  "description": "Create a tier list for popular Android and iOS games.",
+  "categories": [
+    "Battle Royale",
+    "Shooter",
+    "Casual",
+    "Strategy",
+    "Racing",
+    "Puzzle"
+  ],
+  "tiers": [
+    "Must Play",
+    "Great",
+    "Good",
+    "Time Pass",
+    "Avoid"
+  ],
+  "items": [
+    {
+      "title": "BGMI",
+      "imageUrl": "https://picsum.photos/seed/mobile-game-ranking-1/600/600",
+      "alt": "BGMI image"
+    },
+    {
+      "title": "PUBG Mobile",
+      "imageUrl": "https://picsum.photos/seed/mobile-game-ranking-2/600/600",
+      "alt": "PUBG Mobile image"
+    },
+    {
+      "title": "Free Fire",
+      "imageUrl": "https://picsum.photos/seed/mobile-game-ranking-3/600/600",
+      "alt": "Free Fire image"
+    },
+    {
+      "title": "Call of Duty: Mobile",
+      "imageUrl": "https://picsum.photos/seed/mobile-game-ranking-4/600/600",
+      "alt": "Call of Duty: Mobile image"
+    },
+    {
+      "title": "Clash of Clans",
+      "imageUrl": "https://picsum.photos/seed/mobile-game-ranking-5/600/600",
+      "alt": "Clash of Clans image"
+    },
+    {
+      "title": "Clash Royale",
+      "imageUrl": "https://picsum.photos/seed/mobile-game-ranking-6/600/600",
+      "alt": "Clash Royale image"
+    },
+    {
+      "title": "Candy Crush Saga",
+      "imageUrl": "https://picsum.photos/seed/mobile-game-ranking-7/600/600",
+      "alt": "Candy Crush Saga image"
+    },
+    {
+      "title": "Subway Surfers",
+      "imageUrl": "https://picsum.photos/seed/mobile-game-ranking-8/600/600",
+      "alt": "Subway Surfers image"
+    },
+    {
+      "title": "Temple Run",
+      "imageUrl": "https://picsum.photos/seed/mobile-game-ranking-9/600/600",
+      "alt": "Temple Run image"
+    },
+    {
+      "title": "Asphalt 9",
+      "imageUrl": "https://picsum.photos/seed/mobile-game-ranking-10/600/600",
+      "alt": "Asphalt 9 image"
+    },
+    {
+      "title": "Genshin Impact",
+      "imageUrl": "https://picsum.photos/seed/mobile-game-ranking-11/600/600",
+      "alt": "Genshin Impact image"
+    },
+    {
+      "title": "Among Us",
+      "imageUrl": "https://picsum.photos/seed/mobile-game-ranking-12/600/600",
+      "alt": "Among Us image"
+    },
+    {
+      "title": "Roblox",
+      "imageUrl": "https://picsum.photos/seed/mobile-game-ranking-13/600/600",
+      "alt": "Roblox image"
+    },
+    {
+      "title": "Pokemon GO",
+      "imageUrl": "https://picsum.photos/seed/mobile-game-ranking-14/600/600",
+      "alt": "Pokemon GO image"
+    },
+    {
+      "title": "Mobile Legends",
+      "imageUrl": "https://picsum.photos/seed/mobile-game-ranking-15/600/600",
+      "alt": "Mobile Legends image"
+    },
+    {
+      "title": "Brawl Stars",
+      "imageUrl": "https://picsum.photos/seed/mobile-game-ranking-16/600/600",
+      "alt": "Brawl Stars image"
+    },
+    {
+      "title": "Ludo King",
+      "imageUrl": "https://picsum.photos/seed/mobile-game-ranking-17/600/600",
+      "alt": "Ludo King image"
+    },
+    {
+      "title": "8 Ball Pool",
+      "imageUrl": "https://picsum.photos/seed/mobile-game-ranking-18/600/600",
+      "alt": "8 Ball Pool image"
+    }
+  ],
+  "status": "draft",
+  "coverImage": {
+    "url": "https://picsum.photos/seed/mobile-game-ranking-cover/1200/720",
+    "alt": "Mobile Game Ranking cover",
+    "width": 1200,
+    "height": 720
+  }
+}

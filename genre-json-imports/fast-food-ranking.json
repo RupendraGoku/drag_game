@@ -1,0 +1,120 @@
+{
+  "name": "Fast Food Ranking",
+  "slug": "fast-food-ranking",
+  "heading": "Rank the Best Fast Food",
+  "description": "Build a tier list for popular fast food items and snacks.",
+  "categories": [
+    "Burger",
+    "Pizza",
+    "Fried",
+    "Wrap",
+    "Snack",
+    "Dessert"
+  ],
+  "tiers": [
+    "Craving Tier",
+    "Great",
+    "Good",
+    "Average",
+    "Never Again"
+  ],
+  "items": [
+    {
+      "title": "Cheeseburger",
+      "imageUrl": "https://picsum.photos/seed/fast-food-ranking-1/600/600",
+      "alt": "Cheeseburger image"
+    },
+    {
+      "title": "Chicken Burger",
+      "imageUrl": "https://picsum.photos/seed/fast-food-ranking-2/600/600",
+      "alt": "Chicken Burger image"
+    },
+    {
+      "title": "Margherita Pizza",
+      "imageUrl": "https://picsum.photos/seed/fast-food-ranking-3/600/600",
+      "alt": "Margherita Pizza image"
+    },
+    {
+      "title": "Pepperoni Pizza",
+      "imageUrl": "https://picsum.photos/seed/fast-food-ranking-4/600/600",
+      "alt": "Pepperoni Pizza image"
+    },
+    {
+      "title": "French Fries",
+      "imageUrl": "https://picsum.photos/seed/fast-food-ranking-5/600/600",
+      "alt": "French Fries image"
+    },
+    {
+      "title": "Chicken Nuggets",
+      "imageUrl": "https://picsum.photos/seed/fast-food-ranking-6/600/600",
+      "alt": "Chicken Nuggets image"
+    },
+    {
+      "title": "Fried Chicken",
+      "imageUrl": "https://picsum.photos/seed/fast-food-ranking-7/600/600",
+      "alt": "Fried Chicken image"
+    },
+    {
+      "title": "Hot Dog",
+      "imageUrl": "https://picsum.photos/seed/fast-food-ranking-8/600/600",
+      "alt": "Hot Dog image"
+    },
+    {
+      "title": "Taco",
+      "imageUrl": "https://picsum.photos/seed/fast-food-ranking-9/600/600",
+      "alt": "Taco image"
+    },
+    {
+      "title": "Burrito",
+      "imageUrl": "https://picsum.photos/seed/fast-food-ranking-10/600/600",
+      "alt": "Burrito image"
+    },
+    {
+      "title": "Sandwich",
+      "imageUrl": "https://picsum.photos/seed/fast-food-ranking-11/600/600",
+      "alt": "Sandwich image"
+    },
+    {
+      "title": "Shawarma",
+      "imageUrl": "https://picsum.photos/seed/fast-food-ranking-12/600/600",
+      "alt": "Shawarma image"
+    },
+    {
+      "title": "Garlic Bread",
+      "imageUrl": "https://picsum.photos/seed/fast-food-ranking-13/600/600",
+      "alt": "Garlic Bread image"
+    },
+    {
+      "title": "Onion Rings",
+      "imageUrl": "https://picsum.photos/seed/fast-food-ranking-14/600/600",
+      "alt": "Onion Rings image"
+    },
+    {
+      "title": "Nachos",
+      "imageUrl": "https://picsum.photos/seed/fast-food-ranking-15/600/600",
+      "alt": "Nachos image"
+    },
+    {
+      "title": "Milkshake",
+      "imageUrl": "https://picsum.photos/seed/fast-food-ranking-16/600/600",
+      "alt": "Milkshake image"
+    },
+    {
+      "title": "Ice Cream Sundae",
+      "imageUrl": "https://picsum.photos/seed/fast-food-ranking-17/600/600",
+      "alt": "Ice Cream Sundae image"
+    },
+    {
+      "title": "Donut",
+      "imageUrl": "https://picsum.photos/seed/fast-food-ranking-18/600/600",
+      "alt": "Donut image"
+    }
+  ],
+  "status": "draft",
+  "coverImage": {
+    "url": "https://picsum.photos/seed/fast-food-ranking-cover/1200/720",
+    "alt": "Fast Food Ranking cover",
+    "width": 1200,
+    "height": 720
+  }
+}

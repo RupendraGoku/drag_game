@@ -1,0 +1,120 @@
+{
+  "name": "Food Ranking",
+  "slug": "food-ranking",
+  "heading": "Rank the Best Foods",
+  "description": "Rank popular foods across cuisines, flavors, and comfort value.",
+  "categories": [
+    "Indian",
+    "Italian",
+    "Chinese",
+    "Street Food",
+    "Dessert",
+    "Healthy"
+  ],
+  "tiers": [
+    "Favorite",
+    "Delicious",
+    "Good",
+    "Okay",
+    "Not For Me"
+  ],
+  "items": [
+    {
+      "title": "Biryani",
+      "imageUrl": "https://picsum.photos/seed/food-ranking-1/600/600",
+      "alt": "Biryani image"
+    },
+    {
+      "title": "Pizza",
+      "imageUrl": "https://picsum.photos/seed/food-ranking-2/600/600",
+      "alt": "Pizza image"
+    },
+    {
+      "title": "Burger",
+      "imageUrl": "https://picsum.photos/seed/food-ranking-3/600/600",
+      "alt": "Burger image"
+    },
+    {
+      "title": "Pasta",
+      "imageUrl": "https://picsum.photos/seed/food-ranking-4/600/600",
+      "alt": "Pasta image"
+    },
+    {
+      "title": "Noodles",
+      "imageUrl": "https://picsum.photos/seed/food-ranking-5/600/600",
+      "alt": "Noodles image"
+    },
+    {
+      "title": "Dosa",
+      "imageUrl": "https://picsum.photos/seed/food-ranking-6/600/600",
+      "alt": "Dosa image"
+    },
+    {
+      "title": "Paneer Butter Masala",
+      "imageUrl": "https://picsum.photos/seed/food-ranking-7/600/600",
+      "alt": "Paneer Butter Masala image"
+    },
+    {
+      "title": "Butter Chicken",
+      "imageUrl": "https://picsum.photos/seed/food-ranking-8/600/600",
+      "alt": "Butter Chicken image"
+    },
+    {
+      "title": "Samosa",
+      "imageUrl": "https://picsum.photos/seed/food-ranking-9/600/600",
+      "alt": "Samosa image"
+    },
+    {
+      "title": "Momos",
+      "imageUrl": "https://picsum.photos/seed/food-ranking-10/600/600",
+      "alt": "Momos image"
+    },
+    {
+      "title": "Chole Bhature",
+      "imageUrl": "https://picsum.photos/seed/food-ranking-11/600/600",
+      "alt": "Chole Bhature image"
+    },
+    {
+      "title": "Fried Rice",
+      "imageUrl": "https://picsum.photos/seed/food-ranking-12/600/600",
+      "alt": "Fried Rice image"
+    },
+    {
+      "title": "Sushi",
+      "imageUrl": "https://picsum.photos/seed/food-ranking-13/600/600",
+      "alt": "Sushi image"
+    },
+    {
+      "title": "Tacos",
+      "imageUrl": "https://picsum.photos/seed/food-ranking-14/600/600",
+      "alt": "Tacos image"
+    },
+    {
+      "title": "Ice Cream",
+      "imageUrl": "https://picsum.photos/seed/food-ranking-15/600/600",
+      "alt": "Ice Cream image"
+    },
+    {
+      "title": "Gulab Jamun",
+      "imageUrl": "https://picsum.photos/seed/food-ranking-16/600/600",
+      "alt": "Gulab Jamun image"
+    },
+    {
+      "title": "French Fries",
+      "imageUrl": "https://picsum.photos/seed/food-ranking-17/600/600",
+      "alt": "French Fries image"
+    },
+    {
+      "title": "Salad",
+      "imageUrl": "https://picsum.photos/seed/food-ranking-18/600/600",
+      "alt": "Salad image"
+    }
+  ],
+  "status": "draft",
+  "coverImage": {
+    "url": "https://picsum.photos/seed/food-ranking-cover/1200/720",
+    "alt": "Food Ranking cover",
+    "width": 1200,
+    "height": 720
+  }
+}

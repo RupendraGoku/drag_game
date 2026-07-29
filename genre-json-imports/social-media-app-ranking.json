@@ -1,0 +1,120 @@
+{
+  "name": "Social Media App Ranking",
+  "slug": "social-media-app-ranking",
+  "heading": "Rank the Best Social Media Apps",
+  "description": "Compare social platforms by entertainment, utility, community, and trends.",
+  "categories": [
+    "Short Video",
+    "Messaging",
+    "Photo",
+    "Professional",
+    "Community",
+    "Streaming"
+  ],
+  "tiers": [
+    "Daily Use",
+    "Excellent",
+    "Useful",
+    "Occasional",
+    "Avoid"
+  ],
+  "items": [
+    {
+      "title": "Instagram",
+      "imageUrl": "https://picsum.photos/seed/social-media-app-ranking-1/600/600",
+      "alt": "Instagram image"
+    },
+    {
+      "title": "YouTube",
+      "imageUrl": "https://picsum.photos/seed/social-media-app-ranking-2/600/600",
+      "alt": "YouTube image"
+    },
+    {
+      "title": "WhatsApp",
+      "imageUrl": "https://picsum.photos/seed/social-media-app-ranking-3/600/600",
+      "alt": "WhatsApp image"
+    },
+    {
+      "title": "Facebook",
+      "imageUrl": "https://picsum.photos/seed/social-media-app-ranking-4/600/600",
+      "alt": "Facebook image"
+    },
+    {
+      "title": "X",
+      "imageUrl": "https://picsum.photos/seed/social-media-app-ranking-5/600/600",
+      "alt": "X image"
+    },
+    {
+      "title": "Snapchat",
+      "imageUrl": "https://picsum.photos/seed/social-media-app-ranking-6/600/600",
+      "alt": "Snapchat image"
+    },
+    {
+      "title": "TikTok",
+      "imageUrl": "https://picsum.photos/seed/social-media-app-ranking-7/600/600",
+      "alt": "TikTok image"
+    },
+    {
+      "title": "LinkedIn",
+      "imageUrl": "https://picsum.photos/seed/social-media-app-ranking-8/600/600",
+      "alt": "LinkedIn image"
+    },
+    {
+      "title": "Reddit",
+      "imageUrl": "https://picsum.photos/seed/social-media-app-ranking-9/600/600",
+      "alt": "Reddit image"
+    },
+    {
+      "title": "Telegram",
+      "imageUrl": "https://picsum.photos/seed/social-media-app-ranking-10/600/600",
+      "alt": "Telegram image"
+    },
+    {
+      "title": "Discord",
+      "imageUrl": "https://picsum.photos/seed/social-media-app-ranking-11/600/600",
+      "alt": "Discord image"
+    },
+    {
+      "title": "Pinterest",
+      "imageUrl": "https://picsum.photos/seed/social-media-app-ranking-12/600/600",
+      "alt": "Pinterest image"
+    },
+    {
+      "title": "Threads",
+      "imageUrl": "https://picsum.photos/seed/social-media-app-ranking-13/600/600",
+      "alt": "Threads image"
+    },
+    {
+      "title": "Twitch",
+      "imageUrl": "https://picsum.photos/seed/social-media-app-ranking-14/600/600",
+      "alt": "Twitch image"
+    },
+    {
+      "title": "BeReal",
+      "imageUrl": "https://picsum.photos/seed/social-media-app-ranking-15/600/600",
+      "alt": "BeReal image"
+    },
+    {
+      "title": "ShareChat",
+      "imageUrl": "https://picsum.photos/seed/social-media-app-ranking-16/600/600",
+      "alt": "ShareChat image"
+    },
+    {
+      "title": "Moj",
+      "imageUrl": "https://picsum.photos/seed/social-media-app-ranking-17/600/600",
+      "alt": "Moj image"
+    },
+    {
+      "title": "Koo",
+      "imageUrl": "https://picsum.photos/seed/social-media-app-ranking-18/600/600",
+      "alt": "Koo image"
+    }
+  ],
+  "status": "draft",
+  "coverImage": {
+    "url": "https://picsum.photos/seed/social-media-app-ranking-cover/1200/720",
+    "alt": "Social Media App Ranking cover",
+    "width": 1200,
+    "height": 720
+  }
+}
