@@ -5,7 +5,7 @@ import { useState } from 'react';
 import toast from 'react-hot-toast';
 import { apiErrorMessage } from '../../api/axiosInstance.js';
 import { uploadApi } from '../../api/uploadApi.js';
-import { REQUIRED_IMAGE_ITEMS } from '../../config/rankingConfig.js';
+import { MIN_IMAGE_ITEMS } from '../../config/rankingConfig.js';
 import { ImageItemEditor } from './ImageItemEditor.jsx';
 
 const newId = () => globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random()}`;
@@ -44,12 +44,7 @@ export function ImageItemsUploader({ items, setItems, categories, serverErrors, 
   const handleFiles = async (fileList) => {
     const files = Array.from(fileList || []);
     if (!files.length) return;
-    const remainingSlots = REQUIRED_IMAGE_ITEMS - items.length;
-    if (remainingSlots <= 0) {
-      toast.error(`A game can contain exactly ${REQUIRED_IMAGE_ITEMS} images.`);
-      return;
-    }
-    const filesToUpload = files.slice(0, remainingSlots);
+    const filesToUpload = files;
 
     const invalid = filesToUpload.map(validateFile).find(Boolean);
     if (invalid) {
@@ -72,11 +67,8 @@ export function ImageItemsUploader({ items, setItems, categories, serverErrors, 
           order: items.length + uploaded.length
         });
       }
-      update([...items, ...uploaded].slice(0, REQUIRED_IMAGE_ITEMS));
+      update([...items, ...uploaded]);
       toast.success(`${uploaded.length} image${uploaded.length === 1 ? '' : 's'} uploaded`);
-      if (files.length > filesToUpload.length) {
-        toast.error(`${files.length - filesToUpload.length} extra image${files.length - filesToUpload.length === 1 ? '' : 's'} skipped`);
-      }
     } catch (error) {
       toast.error(apiErrorMessage(error));
     } finally {
@@ -88,8 +80,10 @@ export function ImageItemsUploader({ items, setItems, categories, serverErrors, 
     <section className="surface p-5">
       <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
         <div>
-          <h2 className="text-lg font-black text-[#111827]">4. {REQUIRED_IMAGE_ITEMS} Image Items</h2>
-          <p className="mt-1 text-sm text-[#64748b]">{items.length} of {REQUIRED_IMAGE_ITEMS} images uploaded.</p>
+          <h2 className="text-lg font-black text-[#111827]">4. Image Items</h2>
+          <p className="mt-1 text-sm text-[#64748b]">
+            {items.length} image{items.length === 1 ? '' : 's'} uploaded. At least {MIN_IMAGE_ITEMS} required to publish.
+          </p>
         </div>
         <label className="btn btn-secondary focus-ring">
           <ImagePlus size={16} aria-hidden="true" />
@@ -105,7 +99,7 @@ export function ImageItemsUploader({ items, setItems, categories, serverErrors, 
           handleFiles(event.dataTransfer.files);
         }}
       >
-        Drop JPEG, PNG or WebP files here. Publishing requires exactly {REQUIRED_IMAGE_ITEMS} valid items.
+        Drop JPEG, PNG or WebP files here. Publishing requires at least one valid item.
       </div>
       <DndContext sensors={sensors} onDragEnd={onDragEnd}>
         <SortableContext items={items.map((item) => item.id)} strategy={verticalListSortingStrategy}>
@@ -122,7 +116,6 @@ export function ImageItemsUploader({ items, setItems, categories, serverErrors, 
           </div>
         </SortableContext>
       </DndContext>
-      {items.length > REQUIRED_IMAGE_ITEMS ? <p className="mt-3 text-sm font-semibold text-[#dc2626]">A published game must contain exactly {REQUIRED_IMAGE_ITEMS} images.</p> : null}
       {serverErrors.items ? <p className="mt-3 text-sm font-semibold text-[#dc2626]">{serverErrors.items}</p> : null}
     </section>
   );

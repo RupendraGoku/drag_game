@@ -1,6 +1,6 @@
 import crypto from 'crypto';
 import mongoose from 'mongoose';
-import { REQUIRED_IMAGE_ITEMS } from '../config/rankingConfig.js';
+import { MIN_IMAGE_ITEMS } from '../config/rankingConfig.js';
 import { Genre } from '../models/Genre.js';
 import { ApiError } from '../utils/ApiError.js';
 import { slugify } from '../utils/slugify.js';
@@ -88,8 +88,8 @@ export const validatePublishableGenre = (genre) => {
       errors.push({ field: `tiers.${index}.label`, message: 'Every ranking row must have a label' });
     }
   });
-  if ((genre.items || []).length !== REQUIRED_IMAGE_ITEMS) {
-    errors.push({ field: 'items', message: `Exactly ${REQUIRED_IMAGE_ITEMS} image items are required` });
+  if ((genre.items || []).length < MIN_IMAGE_ITEMS) {
+    errors.push({ field: 'items', message: 'At least one image item is required' });
   }
   (genre.items || []).forEach((item, index) => {
     if (!item.title?.trim()) errors.push({ field: `items.${index}.title`, message: 'Every image item needs a title' });

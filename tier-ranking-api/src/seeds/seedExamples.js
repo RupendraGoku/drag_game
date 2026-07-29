@@ -1,6 +1,5 @@
 import crypto from 'crypto';
 import { connectDatabase } from '../config/database.js';
-import { REQUIRED_IMAGE_ITEMS } from '../config/rankingConfig.js';
 import { Admin } from '../models/Admin.js';
 import { Genre } from '../models/Genre.js';
 
@@ -170,9 +169,11 @@ const run = async () => {
       existing.items = existing.items || [];
       const existingNames = new Set(existing.topCategories.map((category) => category.name.toLowerCase()));
       const missingCategories = genre.topCategories.filter((category) => !existingNames.has(category.name.toLowerCase()));
+      const existingItemNames = new Set(existing.items.map((item) => item.title.toLowerCase()));
+      const missingItems = genre.items.filter((item) => !existingItemNames.has(item.title.toLowerCase()));
       let changed = false;
 
-      if (!missingCategories.length && existing.items.length >= REQUIRED_IMAGE_ITEMS) {
+      if (!missingCategories.length && !missingItems.length) {
         console.log(`Sample genre already current: ${genre.slug}`);
         continue;
       }
@@ -193,11 +194,7 @@ const run = async () => {
         });
       }
 
-      const existingItemNames = new Set(existing.items.map((item) => item.title.toLowerCase()));
-      const missingItems = genre.items.filter((item) => !existingItemNames.has(item.title.toLowerCase()));
-
       for (const item of missingItems) {
-        if (existing.items.length >= REQUIRED_IMAGE_ITEMS) break;
         existing.items.push(createSampleItem(genre.slug.split('-')[0], item.title, existing.items.length, existing.topCategories));
         changed = true;
       }

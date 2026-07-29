@@ -1,1 +1,1 @@
-export const REQUIRED_IMAGE_ITEMS = 18;
+export const MIN_IMAGE_ITEMS = 1;

@@ -3,7 +3,6 @@ import crypto from 'crypto';
 import fs from 'fs/promises';
 import path from 'path';
 import { env } from '../config/environment.js';
-import { REQUIRED_IMAGE_ITEMS } from '../config/rankingConfig.js';
 import { ApiError } from '../utils/ApiError.js';
 import { slugify } from '../utils/slugify.js';
 import { validatePublishableGenre } from './genreService.js';
@@ -179,7 +178,6 @@ const syncSampleGenreCategories = () => {
     const missingItems = sample.items.filter((item) => !existingItemNames.has(item.title.toLowerCase()));
 
     for (const item of missingItems) {
-      if (existing.items.length >= REQUIRED_IMAGE_ITEMS) break;
       existing.items.push({
         ...item,
         id: id(),

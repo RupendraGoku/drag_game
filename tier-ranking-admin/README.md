@@ -32,9 +32,11 @@ For production, set `VITE_API_BASE_URL=https://api-ranking.example.com/api/v1` a
 1. Login with an admin account created by the API seed script.
 2. Create a genre draft.
 3. Edit top categories and ranking rows.
-4. Upload exactly 12 valid images.
+4. Upload at least one valid image.
 5. Assign every image to one or more enabled top categories.
 6. Preview the draft.
 7. Save and publish.
+
+You can also start a genre from the create screen by uploading a `.json` file. The import is saved as a draft, and cover/item images can be added afterward.
 
 Refresh tokens are stored in secure HTTP-only cookies by the API. The dashboard keeps only the short-lived access token in web storage.

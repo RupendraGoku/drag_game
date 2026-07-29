@@ -14,6 +14,8 @@ import {
 } from '../controllers/adminGenreController.js';
 import { requireAdmin } from '../middleware/adminMiddleware.js';
 import { requireAuth } from '../middleware/authMiddleware.js';
+import { parseGenreJsonMiddleware } from '../middleware/genreJsonMiddleware.js';
+import { uploadGenreJsonMiddleware } from '../middleware/uploadMiddleware.js';
 import { validateRequest } from '../middleware/validationMiddleware.js';
 import { createGenreSchema, idParamSchema, listGenresSchema, updateGenreSchema } from '../validators/genreValidators.js';
 
@@ -22,7 +24,7 @@ const router = Router();
 router.use(requireAuth, requireAdmin);
 
 router.get('/', validateRequest(listGenresSchema), listGenres);
-router.post('/', validateRequest(createGenreSchema), create);
+router.post('/', uploadGenreJsonMiddleware, parseGenreJsonMiddleware, validateRequest(createGenreSchema), create);
 router.get('/:id', validateRequest(idParamSchema), getOne);
 router.patch('/:id', validateRequest(updateGenreSchema), update);
 router.delete('/:id', validateRequest(idParamSchema), remove);

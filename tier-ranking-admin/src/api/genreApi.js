@@ -3,6 +3,13 @@ import { api } from './axiosInstance.js';
 export const genreApi = {
   list: (params) => api.get('/admin/genres', { params }),
   create: (payload) => api.post('/admin/genres', payload),
+  createFromJson: (file) => {
+    const formData = new FormData();
+    formData.append('genreJson', file);
+    return api.post('/admin/genres', formData, {
+      headers: { 'Content-Type': 'multipart/form-data' }
+    });
+  },
   get: (id) => api.get(`/admin/genres/${id}`),
   update: (id, payload) => api.patch(`/admin/genres/${id}`, payload),
   remove: (id) => api.delete(`/admin/genres/${id}`),

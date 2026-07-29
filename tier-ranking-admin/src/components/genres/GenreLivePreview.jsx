@@ -1,5 +1,4 @@
 import { Fragment } from 'react';
-import { REQUIRED_IMAGE_ITEMS } from '../../config/rankingConfig.js';
 
 export function GenreLivePreview({ genre, viewport = 'desktop' }) {
   const widthClass = {
@@ -65,7 +64,7 @@ export function GenreLivePreview({ genre, viewport = 'desktop' }) {
             </div>
           </div>
           <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-6">
-            {items.slice(0, REQUIRED_IMAGE_ITEMS).map((item) => (
+            {items.map((item) => (
               <div key={item.id} className="rounded-lg border border-[#d8dee7] bg-white p-2 shadow-sm">
                 <img className="aspect-square w-full rounded-md object-cover" src={item.image?.url} alt={item.alt || item.title} />
                 <p className="mt-2 truncate text-xs font-bold text-[#111827]">{item.title}</p>

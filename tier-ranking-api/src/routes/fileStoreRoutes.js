@@ -6,7 +6,8 @@ import path from 'path';
 import { Router } from 'express';
 import { z } from 'zod';
 import { env } from '../config/environment.js';
-import { uploadImageMiddleware } from '../middleware/uploadMiddleware.js';
+import { parseGenreJsonMiddleware } from '../middleware/genreJsonMiddleware.js';
+import { uploadGenreJsonMiddleware, uploadImageMiddleware } from '../middleware/uploadMiddleware.js';
 import { validateRequest } from '../middleware/validationMiddleware.js';
 import { loginSchema } from '../validators/authValidators.js';
 import { createGenreSchema, deleteImageSchema, listGenresSchema, publicGenresSchema, slugParamSchema, updateGenreSchema } from '../validators/genreValidators.js';
@@ -184,7 +185,7 @@ adminGenreRoutes.get('/', validateRequest(listGenresSchema), (req, res) => {
   });
 });
 
-adminGenreRoutes.post('/', validateRequest(createGenreSchema), asyncHandler(async (req, res) => sendSuccess(res, 201, 'Genre created successfully', await createFileGenre(req.body, req.admin._id))));
+adminGenreRoutes.post('/', uploadGenreJsonMiddleware, parseGenreJsonMiddleware, validateRequest(createGenreSchema), asyncHandler(async (req, res) => sendSuccess(res, 201, 'Genre created successfully', await createFileGenre(req.body, req.admin._id))));
 adminGenreRoutes.get('/:id', validateRequest(fileIdParamSchema), (req, res) => sendSuccess(res, 200, 'Genre fetched successfully', findFileGenre(req.params.id)));
 adminGenreRoutes.patch('/:id', validateRequest(fileUpdateGenreSchema), asyncHandler(async (req, res) => sendSuccess(res, 200, 'Genre updated successfully', await updateFileGenre(req.params.id, req.body))));
 adminGenreRoutes.delete('/:id', validateRequest(fileIdParamSchema), asyncHandler(async (req, res) => {

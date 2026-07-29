@@ -1,5 +1,5 @@
 import { zodResolver } from '@hookform/resolvers/zod';
-import { ArrowLeft, Eye, Save, Trash2, UploadCloud } from 'lucide-react';
+import { ArrowLeft, Eye, FileJson, Save, Trash2, UploadCloud } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
@@ -7,7 +7,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { z } from 'zod';
 import { apiErrorMessage } from '../../api/axiosInstance.js';
 import { genreApi } from '../../api/genreApi.js';
-import { REQUIRED_IMAGE_ITEMS } from '../../config/rankingConfig.js';
+import { MIN_IMAGE_ITEMS } from '../../config/rankingConfig.js';
 import { useUnsavedChanges } from '../../hooks/useUnsavedChanges.js';
 import { ConfirmDialog } from '../common/ConfirmDialog.jsx';
 import { BasicInformationSection } from './BasicInformationSection.jsx';
@@ -64,7 +64,7 @@ const publishingErrors = (payload) => {
   if (activeCategories.length < 1) errors.push('At least one enabled ranking column is required.');
   if (new Set(categoryNames).size !== categoryNames.length) errors.push('Ranking column names must be unique.');
   if (activeTiers.length < 2) errors.push('At least two enabled ranking rows are required.');
-  if (payload.items.length !== REQUIRED_IMAGE_ITEMS) errors.push(`Exactly ${REQUIRED_IMAGE_ITEMS} image items are required before publishing.`);
+  if (payload.items.length < MIN_IMAGE_ITEMS) errors.push('At least one image item is required before publishing.');
   payload.items.forEach((item, index) => {
     if (!item.title?.trim()) errors.push(`Image item ${index + 1} needs a title.`);
     if (!item.image?.url) errors.push(`Image item ${index + 1} needs an uploaded image.`);
@@ -173,6 +173,29 @@ export function GenreForm({ mode, initialGenre }) {
     isActive
   });
 
+  const importJson = async (file) => {
+    if (!file || mode !== 'create') return;
+    if (!file.name.toLowerCase().endsWith('.json') && file.type !== 'application/json') {
+      toast.error('Upload a valid JSON file');
+      return;
+    }
+    if ((isDirty || dirty) && !window.confirm('Importing JSON will replace this unsaved draft. Continue?')) return;
+
+    setSavingAction('import-json');
+    try {
+      const response = await genreApi.createFromJson(file);
+      const createdId = response.data.data._id || response.data.data.id;
+      toast.success('Genre imported as draft');
+      setDirty(false);
+      navigate(`/genres/${createdId}/edit`, { replace: true });
+    } catch (error) {
+      setServerErrors(mapServerErrors(error));
+      toast.error(apiErrorMessage(error));
+    } finally {
+      setSavingAction('');
+    }
+  };
+
   const save = async (values, action) => {
     const nextStatus = action === 'publish' ? 'published' : action === 'draft' ? 'draft' : status;
     const payload = buildPayload(values, nextStatus);
@@ -186,7 +209,7 @@ export function GenreForm({ mode, initialGenre }) {
           coverImage: localErrors.find((error) => error.includes('Cover image')),
           topCategories: localErrors.find((error) => error.includes('column') || error.includes('Column')),
           tiers: localErrors.find((error) => error.includes('row')),
-          items: localErrors.find((error) => error.includes('image') || error.includes('Image'))
+          items: localErrors.find((error) => error.toLowerCase().includes('image item'))
         });
         return;
       }
@@ -236,12 +259,30 @@ export function GenreForm({ mode, initialGenre }) {
           <h1 className="text-2xl font-black text-[#111827]">{mode === 'create' ? 'Create Genre' : 'Edit Genre'}</h1>
           <p className="mt-1 text-sm text-[#64748b]">Configure the public tier-ranking game from backend-driven data.</p>
         </div>
-        {genreId ? (
-          <Link className="btn btn-secondary focus-ring" to={`/genres/${genreId}/preview`}>
-            <Eye size={16} aria-hidden="true" />
-            Full Preview
-          </Link>
-        ) : null}
+        <div className="flex flex-wrap gap-2">
+          {mode === 'create' ? (
+            <label className="btn btn-secondary focus-ring">
+              <FileJson size={16} aria-hidden="true" />
+              {savingAction === 'import-json' ? 'Importing...' : 'Import JSON'}
+              <input
+                className="sr-only"
+                type="file"
+                accept="application/json,.json"
+                disabled={Boolean(savingAction)}
+                onChange={(event) => {
+                  importJson(event.target.files?.[0]);
+                  event.target.value = '';
+                }}
+              />
+            </label>
+          ) : null}
+          {genreId ? (
+            <Link className="btn btn-secondary focus-ring" to={`/genres/${genreId}/preview`}>
+              <Eye size={16} aria-hidden="true" />
+              Full Preview
+            </Link>
+          ) : null}
+        </div>
       </div>
 
       <form className="space-y-5">
@@ -284,7 +325,7 @@ export function GenreForm({ mode, initialGenre }) {
         </section>
         <div className="sticky bottom-0 z-20 flex flex-wrap items-center justify-between gap-3 border border-[#d8dee7] bg-white p-3 shadow-lg">
           <div className="text-sm font-semibold text-[#64748b]">
-            {items.length} of {REQUIRED_IMAGE_ITEMS} images. {topCategories.filter((category) => category.isActive !== false).length} active ranking columns.{' '}
+            {items.length} image{items.length === 1 ? '' : 's'}. {topCategories.filter((category) => category.isActive !== false).length} active ranking columns.{' '}
             {tiers.filter((tier) => tier.isActive !== false).length} active rows.
           </div>
           <div className="flex flex-wrap gap-2">

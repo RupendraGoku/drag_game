@@ -8,7 +8,6 @@ import { ConfirmDialog } from '../components/common/ConfirmDialog.jsx';
 import { EmptyState } from '../components/common/EmptyState.jsx';
 import { Skeleton } from '../components/common/Skeleton.jsx';
 import { GenreTable } from '../components/genres/GenreTable.jsx';
-import { REQUIRED_IMAGE_ITEMS } from '../config/rankingConfig.js';
 
 export function GenreListPage() {
   const [genres, setGenres] = useState([]);
@@ -118,7 +117,7 @@ export function GenreListPage() {
           </div>
         </>
       ) : (
-        <EmptyState title="No genres found" message={`Create a draft genre, add ranking columns, rows and exactly ${REQUIRED_IMAGE_ITEMS} images, then publish it.`} action={<Link className="btn btn-primary" to="/genres/create">Create Genre</Link>} />
+        <EmptyState title="No genres found" message="Create a draft genre, add ranking columns, rows and at least one image, then publish it." action={<Link className="btn btn-primary" to="/genres/create">Create Genre</Link>} />
       )}
       <ConfirmDialog
         open={Boolean(confirm)}

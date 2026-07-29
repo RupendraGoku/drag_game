@@ -19,7 +19,7 @@ Validation errors return:
   "success": false,
   "message": "Validation failed",
   "errors": [
-    { "field": "items", "message": "Exactly 12 image items are required" }
+    { "field": "items", "message": "At least one image item is required" }
   ]
 }
 ```
@@ -77,6 +77,8 @@ Query: `search`, `status`, `isActive`, `sort`, `page`, `limit`.
 `POST /admin/genres`
 
 Creates a draft or published genre. Publishing is rejected until all publishing requirements pass.
+
+This endpoint also accepts `multipart/form-data` with a JSON file field named `genreJson`. Imported JSON is saved as a draft, so cover and item images can be uploaded later from the admin editor.
 
 `GET /admin/genres/:id`
 
